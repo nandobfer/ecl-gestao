@@ -13,11 +13,11 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
     const navigate = useNavigate()
     
     const buttons: AnchorButton[] = [
-        {label: 'Sobre nós', anchorId: '#about-us'},
-        {label: 'Serviços', anchorId: '#services'},
-        {label: 'Karen Miniacci', anchorId: ''},
-        {label: 'Metodologia', anchorId: ''},
-        {label: 'Contato', anchorId: ''},
+        { label: "Sobre nós", anchorId: "#about-us" },
+        { label: "Serviços", anchorId: "#services" },
+        { label: "Karen Miniacci", anchorId: "#about-me" },
+        { label: "Metodologia", anchorId: "" },
+        { label: "Contato", anchorId: "" },
     ]
     
     return (

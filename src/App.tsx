@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import { FirstView } from './components/FirstView'
 import { AboutUs } from './components/AboutUs'
 import { Services } from './components/Services'
+import { AboutMe } from "./components/AboutMe"
 
 export const App:React.FC<{}> = () => {
     const theme = useTheme()
@@ -16,6 +17,7 @@ export const App:React.FC<{}> = () => {
             <FirstView />
             <AboutUs />
             <Services />
+            <AboutMe />
         </ThemeProvider>
     )
 }
