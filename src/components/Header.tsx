@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
         { label: "Serviços", anchorId: "#services" },
         { label: "Karen Miniacci", anchorId: "#about-me" },
         { label: "Metodologia", anchorId: "#methodology" },
-        { label: "Contato", anchorId: "" },
+        { label: "Contato", anchorId: "#contact" },
     ]
     
     return (

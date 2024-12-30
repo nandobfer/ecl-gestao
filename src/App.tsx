@@ -9,10 +9,11 @@ import { Services } from './components/Services'
 import { AboutMe } from "./components/AboutMe"
 import { Methodology } from "./components/Methodology"
 import { Differences } from "./components/Differences"
+import { Contact } from "./components/Contact"
 
-export const App:React.FC<{}> = () => {
+export const App: React.FC<{}> = () => {
     const theme = useTheme()
-    
+
     return (
         <ThemeProvider theme={theme}>
             <Header />
@@ -22,6 +23,7 @@ export const App:React.FC<{}> = () => {
             <AboutMe />
             <Methodology />
             <Differences />
+            <Contact />
         </ThemeProvider>
     )
 }
