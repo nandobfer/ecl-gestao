@@ -167,7 +167,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                     <Box
                         sx={{
                             flexDirection: "column",
-                            gap: "4vw",
+                            gap: "3vw",
                             flex: 1,
                         }}
                     >
