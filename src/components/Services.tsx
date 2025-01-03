@@ -2,6 +2,9 @@ import React from 'react'
 import { Box, Button, Typography } from "@mui/material"
 import { colors } from "../style/colors"
 import { Cta } from "./Cta"
+import { useInView } from "../hooks/useInView"
+import { motion } from "framer-motion"
+import { animationVariants } from "../animationVariants"
 
 interface ServicesProps {}
 
@@ -56,80 +59,98 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
 )
 
 export const Services: React.FC<ServicesProps> = ({}) => {
+    const { ref, inView } = useInView()
+    const { ref: ref2, inView: inView2 } = useInView()
+
     return (
-        <Box id="services" sx={{ flexDirection: "column", padding: "7vw", paddingTop: "11vw", gap: "10vw" }}>
-            <Box
-                sx={{
-                    justifyContent: "space-between",
-                    bgcolor: colors.light_pink,
-                    margin: "-4vw",
-                    marginTop: "-12vw",
-                    zIndex: -1,
-                    padding: "3vw",
-                    paddingTop: "9vw",
-                    paddingBottom: "5vw",
-                    borderRadius: "3vw",
-                    borderTopRightRadius: 0,
-                    borderTopLeftRadius: 0,
-                    position: "relative",
-                }}
+        <Box ref={ref} id="services" sx={{ flexDirection: "column", padding: "7vw", paddingTop: "11vw", gap: "10vw" }}>
+            <motion.div
+                style={{ zIndex: -1 }}
+                initial="initial"
+                animate={inView ? "animate" : "initial"}
+                variants={animationVariants({ vertical: true })}
             >
-                <Typography
-                    variant="h1"
-                    sx={{
-                        flex: 0.4,
-                    }}
-                >
-                    Nossos serviços
-                </Typography>
-
-                <Typography
-                    sx={{
-                        flex: 0.55,
-                        alignSelf: "flex-end",
-                        fontWeight: 500,
-                        fontSize: "1.85rem",
-                        lineHeight: "2.5rem",
-                    }}
-                >
-                    Aqui, <span style={{ fontWeight: 700 }}>mapeamos</span> e <span style={{ fontWeight: 700 }}>revolucionamos</span> a operação do
-                    seu negócio. Nossa <span style={{ fontWeight: 700 }}>metodologia exclusiva</span> nos permite atuar com precisão em cada etapa:
-                </Typography>
-
                 <Box
                     sx={{
-                        position: "absolute",
-                        width: "3.5vw",
-                        height: "3.5vw",
-                        bgcolor: colors.blue,
-                        right: "2.5vw",
-                        bottom: "-1.5vw",
-                        borderRadius: "100%",
+                        justifyContent: "space-between",
+                        bgcolor: colors.light_pink,
+                        margin: "-4vw",
+                        marginTop: "-12vw",
+                        zIndex: -1,
+                        padding: "3vw",
+                        paddingTop: "9vw",
+                        paddingBottom: "5vw",
+                        borderRadius: "3vw",
+                        borderTopRightRadius: 0,
+                        borderTopLeftRadius: 0,
+                        position: "relative",
                     }}
-                />
-            </Box>
+                >
+                    <Typography
+                        variant="h1"
+                        sx={{
+                            flex: 0.4,
+                        }}
+                    >
+                        Nossos serviços
+                    </Typography>
+
+                    <Typography
+                        sx={{
+                            flex: 0.55,
+                            alignSelf: "flex-end",
+                            fontWeight: 500,
+                            fontSize: "1.85rem",
+                            lineHeight: "2.5rem",
+                        }}
+                    >
+                        Aqui, <span style={{ fontWeight: 700 }}>mapeamos</span> e <span style={{ fontWeight: 700 }}>revolucionamos</span> a operação
+                        do seu negócio. Nossa <span style={{ fontWeight: 700 }}>metodologia exclusiva</span> nos permite atuar com precisão em cada
+                        etapa:
+                    </Typography>
+
+                    <Box
+                        sx={{
+                            position: "absolute",
+                            width: "3.5vw",
+                            height: "3.5vw",
+                            bgcolor: colors.blue,
+                            right: "2.5vw",
+                            bottom: "-1.5vw",
+                            borderRadius: "100%",
+                        }}
+                    />
+                </Box>
+            </motion.div>
 
             <Box
+                ref={ref2}
                 sx={{
                     gap: "3vw",
                     padding: "0 1vw",
                 }}
             >
-                <ServiceItem
-                    number={1}
-                    title="Cadeia de valor"
-                    description="Diagnóstico estratégico e profundo do nível estratégico até o operacional, baseado na proposta de valor da sua empresa"
-                />
-                <ServiceItem
-                    number={2}
-                    title="Mapeamento de processos"
-                    description='De "como está" para "como deve ser", desenhamos e implementamos fluxos que eliminam desperdícios e aumentam a eficiência'
-                />
-                <ServiceItem
-                    number={3}
-                    title="Implantação na prática"
-                    description="Vamos além da teoria, entregando treinamentos, documentação e acompanhamento em tempo real"
-                />
+                <motion.div initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({ delay: 0 })}>
+                    <ServiceItem
+                        number={1}
+                        title="Cadeia de valor"
+                        description="Diagnóstico estratégico e profundo do nível estratégico até o operacional, baseado na proposta de valor da sua empresa"
+                    />
+                </motion.div>
+                <motion.div initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({ delay: 0.5 })}>
+                    <ServiceItem
+                        number={2}
+                        title="Mapeamento de processos"
+                        description='De "como está" para "como deve ser", desenhamos e implementamos fluxos que eliminam desperdícios e aumentam a eficiência'
+                    />
+                </motion.div>
+                <motion.div initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({ delay: 1 })}>
+                    <ServiceItem
+                        number={3}
+                        title="Implantação na prática"
+                        description="Vamos além da teoria, entregando treinamentos, documentação e acompanhamento em tempo real"
+                    />
+                </motion.div>
             </Box>
 
             <Cta color="secondary" href="#contact" style={{ margin: "-2vw auto 0" }}>
