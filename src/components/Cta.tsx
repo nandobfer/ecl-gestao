@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Button, SxProps } from "@mui/material"
+import { Button, SxProps } from "@mui/material"
 
 interface CtaProps {
     color?: "inherit" | "primary" | "secondary" | "success" | "error" | "info" | "warning"

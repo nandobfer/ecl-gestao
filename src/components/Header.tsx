@@ -2,16 +2,13 @@ import React from 'react'
 import {Box, Button, MenuItem} from '@mui/material'
 import { colors } from '../style/colors'
 import logo from '/logo.svg'
-import { AnchorButton } from '../types/AnchorButton'
-import { useNavigate } from 'react-router-dom'
+import { AnchorButton } from "../types/AnchorButton"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
 
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = ({}) => {
-    const navigate = useNavigate()
-
     const buttons: AnchorButton[] = [
         { label: "Sobre nós", anchorId: "#about-us" },
         { label: "Serviços", anchorId: "#services" },

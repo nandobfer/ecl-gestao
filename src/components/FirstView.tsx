@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-import { Box, Button, Typography } from "@mui/material"
+import React from "react"
+import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
 import { Cta } from "./Cta"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
-import { useVisibleCallback } from "burgos-use-visible-callback"
 import { useInView } from "../hooks/useInView"
 
 interface FirstViewProps {}
 
 export const FirstView: React.FC<FirstViewProps> = ({}) => {
-    const {ref, inView} = useInView()
+    const { ref, inView } = useInView()
 
     return (
         <Box sx={{ padding: "6vw" }} ref={ref}>
