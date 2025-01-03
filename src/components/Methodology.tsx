@@ -162,7 +162,10 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
 
                 <Box sx={{ gap: "5vw" }}>
                     <Box sx={{ flex: 0.8, position: "relative" }}>
-                        <img src="/methodology.png" style={{ position: "absolute", width: "37vw", height: "auto", top: "-3vw", left: 0 }} />
+                        <img
+                            src="/methodology.png"
+                            style={{ position: "absolute", width: "37vw", height: "auto", top: "-3vw", left: 0, zIndex: 2 }}
+                        />
                     </Box>
                     <Box
                         sx={{
