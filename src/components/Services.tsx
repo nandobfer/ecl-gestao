@@ -1,10 +1,9 @@
 import React from 'react'
-import {Box, Typography} from '@mui/material'
-import { colors } from '../style/colors'
+import { Box, Button, Typography } from "@mui/material"
+import { colors } from "../style/colors"
+import { Cta } from "./Cta"
 
-interface ServicesProps {
-    
-}
+interface ServicesProps {}
 
 const ServiceItem: React.FC<{ title: string; description: string; number: number }> = (props) => (
     <Box
@@ -34,12 +33,12 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
         <Box
             sx={{
                 padding: "2.5vw",
-                marginTop: "-2vw",
+                marginTop: "-3vw",
                 left: 0,
                 border: "2px solid black",
                 borderRadius: "3vw",
                 zIndex: -1,
-                paddingTop: "4vw",
+                paddingTop: "4.5vw",
                 height: "19vw",
             }}
         >
@@ -59,7 +58,22 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
 export const Services: React.FC<ServicesProps> = ({}) => {
     return (
         <Box id="services" sx={{ flexDirection: "column", padding: "7vw", paddingTop: "11vw", gap: "10vw" }}>
-            <Box sx={{ justifyContent: "space-between" }}>
+            <Box
+                sx={{
+                    justifyContent: "space-between",
+                    bgcolor: colors.light_pink,
+                    margin: "-4vw",
+                    marginTop: "-12vw",
+                    zIndex: -1,
+                    padding: "3vw",
+                    paddingTop: "9vw",
+                    paddingBottom: "5vw",
+                    borderRadius: "3vw",
+                    borderTopRightRadius: 0,
+                    borderTopLeftRadius: 0,
+                    position: "relative",
+                }}
+            >
                 <Typography
                     variant="h1"
                     sx={{
@@ -81,9 +95,26 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                     Aqui, <span style={{ fontWeight: 700 }}>mapeamos</span> e <span style={{ fontWeight: 700 }}>revolucionamos</span> a operação do
                     seu negócio. Nossa <span style={{ fontWeight: 700 }}>metodologia exclusiva</span> nos permite atuar com precisão em cada etapa:
                 </Typography>
+
+                <Box
+                    sx={{
+                        position: "absolute",
+                        width: "3.5vw",
+                        height: "3.5vw",
+                        bgcolor: colors.blue,
+                        right: "2.5vw",
+                        bottom: "-1.5vw",
+                        borderRadius: "100%",
+                    }}
+                />
             </Box>
 
-            <Box sx={{ flex: 1, gap: "3vw", padding: "0 1vw" }}>
+            <Box
+                sx={{
+                    gap: "3vw",
+                    padding: "0 1vw",
+                }}
+            >
                 <ServiceItem
                     number={1}
                     title="Cadeia de valor"
@@ -101,51 +132,56 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                 />
             </Box>
 
-            <Box sx={{ height: "100vh", position: "relative", margin: "-7vw" }}>
+            <Cta color="secondary" href="#contact" style={{ margin: "-2vw auto 0" }}>
+                otimize sua empresa
+            </Cta>
+
+            <Box sx={{ position: "relative", margin: "-5vw -7vw" }}>
                 <Box
                     sx={{
-                        bgcolor: colors.blue,
-                        width: 0.588,
-                        height: 0.68,
                         position: "absolute",
                         top: 0,
                         right: 0,
-                        borderTopLeftRadius: "2vw",
-                        justifyContent: "center",
-                        alignItems: "center",
+                        flexDirection: "column",
+                        gap: "3vw",
                     }}
                 >
-                    <img src="/services.png" style={{ width: "45vw", height: "auto", zIndex: 2 }} />
+                    <img src="/services.png" style={{ width: "50vw", height: "auto", zIndex: 2 }} />
+                    <Typography variant="body2" sx={{ marginLeft: "8vw", width: "40vw" }}>
+                        O que nos motiva é ver cada cliente <span style={{ fontWeight: 700 }}>atingindo novos patamares</span>. Afinal, quando você
+                        cresce de forma sustentável, <span style={{ fontWeight: 700 }}>nós crescemos juntos</span>.
+                    </Typography>
                 </Box>
 
                 <Box
                     sx={{
                         bgcolor: colors.dark_pink,
                         width: 0.545,
-                        height: 0.86,
-                        position: "absolute",
-                        bottom: 0,
-                        left: 0,
                         borderTopRightRadius: "2vw",
                         borderBottomRightRadius: "2vw",
                         padding: "6.2vw",
-                        paddingTop: "8.2vw",
                         whiteSpace: "break-spaces",
                         flexDirection: "column",
                         gap: "3vw",
                     }}
                 >
                     <Typography
-                        variant="h1"
                         sx={{
                             color: colors.light_pink,
-                            fontSize: "4.2rem",
-                            lineHeight: "4rem",
+                            fontSize: "1.9rem",
+                            lineHeight: "1.4rem",
+                            width: 0.3,
+                            fontWeight: "bold",
                         }}
                     >
-                        Diferente de
-                        <br />
-                        outras consultorias, não entregamos soluções genéricas
+                        Diferente de outras consultorias,
+                    </Typography>
+
+                    <Typography
+                        variant="h1"
+                        sx={{ fontSize: "6.5rem", lineHeight: "6.5rem", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
+                    >
+                        não entregamos soluções genéricas
                     </Typography>
 
                     <Typography
@@ -170,15 +206,10 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         right: 0,
                         padding: "3vw",
                     }}
-                >
-                    <Typography variant="body2" sx={{}}>
-                        O que nos motiva é ver cada cliente <span style={{ fontWeight: 700 }}>atingindo novos patamares</span>. Afinal, quando você
-                        cresce de forma sustentável, <span style={{ fontWeight: 700 }}>nós crescemos juntos</span>.
-                    </Typography>
-                </Box>
+                ></Box>
             </Box>
 
-            <Box sx={{ padding: "11.5vw 0.5vw" }}>
+            <Box sx={{ padding: "3vw 0.5vw 8vw" }}>
                 <Typography
                     variant="h2"
                     sx={{

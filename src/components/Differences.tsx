@@ -1,6 +1,7 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
+import { Cta } from "./Cta"
 
 interface DifferencesProps {}
 
@@ -12,9 +13,10 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                 paddingBottom: "5vw",
                 bgcolor: colors.blue,
                 borderRadius: "3vw",
-                height: "100vh",
-                marginTop: "-10vw",
+                marginTop: "-5vw",
                 flexDirection: "column",
+                gap: "5vw",
+                position: "relative",
             }}
         >
             <Box sx={{ gap: "3vw", alignItems: "flex-end" }}>
@@ -46,6 +48,22 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                     Porque para nós, <span style={{ color: colors.light_pink }}>crescer sem caos</span> não é apenas possível, é essencial.
                 </Typography>
             </Box>
+
+            <Cta color="primary" href="#contact" style={{ margin: "0 auto" }}>
+                quero transformar meus processos
+            </Cta>
+
+            <Box
+                sx={{
+                    position: "absolute",
+                    width: "8vw",
+                    height: "8vw",
+                    bgcolor: colors.light_pink,
+                    right: "8vw",
+                    bottom: "-4vw",
+                    borderRadius: "100%",
+                }}
+            />
         </Box>
     )
 }

@@ -19,8 +19,8 @@ export const App: React.FC<{}> = () => {
             <Header />
             <FirstView />
             <AboutUs />
-            <Services />
             <AboutMe />
+            <Services />
             <Methodology />
             <Differences />
             <Contact />

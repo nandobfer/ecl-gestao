@@ -12,18 +12,17 @@ export const AboutUs:React.FC<AboutUsProps> = ({  }) => {
         <Box
             id="about-us"
             sx={{
-                height: "100vh",
-                bgcolor: colors.blue,
+                // bgcolor: colors.blue,
                 width: "100vw",
                 borderRadius: "3vw",
                 flexDirection: "column",
-                padding: "10vw 12vw",
+                padding: "6vw 12vw 6vw",
                 gap: "4vw",
             }}
         >
             <Typography
                 sx={{
-                    color: colors.grey,
+                    color: colors.blue,
                     fontSize: "1.49rem",
                     fontWeight: 500,
                     lineHeight: "2.2rem",
@@ -35,13 +34,13 @@ export const AboutUs:React.FC<AboutUsProps> = ({  }) => {
             </Typography>
 
             <Box sx={{ alignItems: "center", gap: "1vw" }}>
-                <Typography variant="h5" sx={{ flex: 0.4 }}>
-                    Nosso diferencial? Vivência <span style={{ color: colors.light_pink, fontFamily: "Yaldevi" }}>real</span>.
+                <Typography variant="h5" sx={{ flex: 0.4, color: colors.blue }}>
+                    Nosso diferencial? Vivência <span style={{ color: colors.dark_pink, fontFamily: "Yaldevi" }}>real</span>.
                 </Typography>
 
                 <Typography
                     sx={{
-                        color: colors.grey,
+                        color: colors.blue,
                         flex: 0.7,
                         fontSize: "1.49rem",
                         fontWeight: 500,

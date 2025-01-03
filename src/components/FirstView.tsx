@@ -2,47 +2,56 @@ import React from 'react'
 import {Box, Button, Typography} from '@mui/material'
 import { colors } from '../style/colors'
 import first_view_image from '/first_view.png'
+import { Cta } from "./Cta"
 
-interface FirstViewProps {
-    
-}
+interface FirstViewProps {}
 
-export const FirstView:React.FC<FirstViewProps> = ({  }) => {
-    
+export const FirstView: React.FC<FirstViewProps> = ({}) => {
     return (
-        <Box sx={{ padding: '6vw', alignItems: 'center', position: 'relative' }}>
-            
-            
-            <Box id='first-view' sx={{flexDirection: 'column', flex: 1, gap: '2vw'}}>
-                <Typography sx={{fontSize: '1.835rem', color: colors.dark_pink, fontWeight: 700}}>Modelagem de Negócios</Typography>
-                <Typography sx={{
-                    color: colors.blue,
-                    fontWeight: 700,
-                    fontSize: '3.6rem',
-                    lineHeight: '3.8rem',
-                    fontFamily: 'Yaldevi'
-                }}>Transformamos processos em resultados através da tríade: pessoas, processos & tecnologia</Typography>
+        <Box sx={{ padding: "6vw" }}>
+            <img
+                src="/background.png"
+                style={{
+                    position: "absolute",
+                    width: "100vw",
+                    height: "110vh",
+                    zIndex: -1,
+                    top: 0,
+                    right: "-2vw",
+                }}
+            />
+            <Box
+                sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100vw",
+                    height: "110vh",
+                    background: `linear-gradient(to right, ${colors.blue} 25%, #7B7E8E99 60%, #F5F5F500 80%);`,
+                    zIndex: -1,
+                    borderBottomLeftRadius: "2vw",
+                    borderTopLeftRadius: "2vw",
+                }}
+            />
+            <Box id="first-view" sx={{ flexDirection: "column", flex: 1, gap: "2vw" }}>
+                <Typography sx={{ fontSize: "1.835rem", color: colors.light_pink, fontWeight: 700 }}>Modelagem de Negócios</Typography>
+                <Typography
+                    sx={{
+                        color: colors.grey,
+                        fontWeight: 700,
+                        fontSize: "4.5rem",
+                        lineHeight: "4.5rem",
+                        fontFamily: "Yaldevi",
+                        width: 0.65,
+                    }}
+                >
+                    Transformamos processos em resultados através da tríade: pessoas, processos & tecnologia
+                </Typography>
 
-                <Button variant='contained' color='secondary' sx={{
-                    borderRadius: '5vw',
-                    fontSize: '2rem',
-                    alignSelf: 'center',
-                    padding: '1vw 5vw',
-                    marginTop: 'auto',
-                    marginRight: '13vw'
-                }}>otimize sua empresa</Button>
+                <Cta color="primary" href="#about-us" style={{ padding: "1vw 10vw" }}>
+                    saiba mais
+                </Cta>
             </Box>
-
-            <img src={first_view_image} style={{
-                width: '38vw', height: 'auto', aspectRatio: 1.32, marginLeft: '2vw'
-            }} />
-
-            <Box sx={{
-                right: 0, bottom: '-10vh', width: '90vw', height: '30vh', bgcolor: colors.dark_pink,
-                position: 'absolute',
-                zIndex: -1,
-                borderTopRightRadius: '3vw'
-            }} />
         </Box>
     )
 }

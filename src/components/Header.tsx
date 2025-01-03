@@ -15,30 +15,45 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
     const buttons: AnchorButton[] = [
         { label: "Sobre nós", anchorId: "#about-us" },
         { label: "Serviços", anchorId: "#services" },
-        { label: "Karen Miniacci", anchorId: "#about-me" },
         { label: "Metodologia", anchorId: "#methodology" },
         { label: "Contato", anchorId: "#contact" },
     ]
-    
+
     return (
-        <Box sx={{padding: '0 6vw', paddingBottom: '2vw'}}>
-            <MenuItem sx={{
-                bgcolor: colors.blue, padding: '2vw', paddingTop: '3vw', fontSize: '1.5rem', color: colors.grey, borderBottomRightRadius: '2vw', borderBottomLeftRadius: '2vw', '&:hover': {
-                bgcolor: colors.blue
-            }}}>
-                <img src={logo} style={{width: '16vw', height: 'auto'}} />
+        <Box sx={{ padding: "0 6vw", paddingBottom: "2vw" }}>
+            <MenuItem
+                sx={{
+                    padding: "2vw",
+                    paddingTop: "3vw",
+                    fontSize: "1.5rem",
+                    color: colors.grey,
+                    borderBottomRightRadius: "2vw",
+                    borderBottomLeftRadius: "2vw",
+                    "&:hover": {},
+                }}
+            >
+                <img src={logo} style={{ width: "16vw", height: "auto" }} />
             </MenuItem>
 
-            <Box sx={{ padding: '0 1.5vw', paddingTop: '3vw', justifyContent: 'space-between', flex: 1}}>
-                {buttons.map(button => <Button variant='outlined' sx={{
-                    borderRadius: '5vw', borderColor: 'black',
-                    fontWeight: 600, fontSize: '1.5rem',
-                    padding: '0 1.7vw',
-                    height: '3vw', borderWidth: '2px'
-                    
-                }}>
-                    <a href={button.anchorId}>{button.label}</a>
-                    </Button>)}
+            <Box sx={{ padding: "0 4vw", paddingTop: "3vw", justifyContent: "space-between", flex: 1 }}>
+                {buttons.map((button) => (
+                    <Button
+                        variant="contained"
+                        color="inherit"
+                        href={button.anchorId}
+                        sx={{
+                            borderRadius: "5vw",
+                            fontWeight: 600,
+                            fontSize: "1.5rem",
+                            padding: "0 1.7vw",
+                            height: "3vw",
+                            borderWidth: "2px",
+                            color: colors.blue,
+                        }}
+                    >
+                        {button.label}
+                    </Button>
+                ))}
             </Box>
         </Box>
     )

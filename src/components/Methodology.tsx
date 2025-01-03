@@ -73,31 +73,31 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
     ]
 
     return (
-        <Box id="methodology" sx={{ padding: "10vw", flexDirection: "column", gap: "2vw", position: "relative" }}>
-            <Typography
-                sx={{
-                    color: colors.dark_pink,
-                    fontWeight: "bold",
-                    fontFamily: "Yaldevi",
-                    fontSize: "2.7rem",
-                    lineHeight: "2.7rem",
-                }}
-            >
-                Nosso Método & Entregáveis
-            </Typography>
-            <Typography variant="h6">
-                Uma metodologia <span style={{ color: colors.dark_pink }}>exclusiva</span> para resultados sustentáveis
-            </Typography>
-            <Typography variant="body2" sx={{ color: colors.blue, fontSize: "2rem" }}>
-                Nosso método é baseado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
-                <span style={{ fontWeight: "bold" }}>vantagens competitivas</span>. Com uma abordagem prática e descomplicada, trabalhamos desde o{" "}
-                <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a <span style={{ fontWeight: "bold" }}>implementação</span> e
-                acompanhamento do novo modelo, garantindo resultados reais e duradouros.
-            </Typography>
+        <Box id="methodology" sx={{ padding: "10vw", paddingTop: 0, flexDirection: "column", gap: "2vw", position: "relative" }}>
+            <Box sx={{ bgcolor: colors.light_pink, borderRadius: "3vw", flexDirection: "column", margin: "-10vw", padding: "10vw", zIndex: -1 }}>
+                <Typography
+                    sx={{
+                        color: colors.dark_pink,
+                        fontWeight: "bold",
+                        fontFamily: "Yaldevi",
+                        fontSize: "2.7rem",
+                        lineHeight: "2.7rem",
+                    }}
+                >
+                    Nosso Método & Entregáveis
+                </Typography>
+                <Typography variant="h6">
+                    Uma metodologia <span style={{ color: colors.dark_pink }}>exclusiva</span> para resultados sustentáveis
+                </Typography>
+                <Typography variant="body2" sx={{ color: colors.blue, fontSize: "2rem" }}>
+                    Nosso método é baseado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
+                    <span style={{ fontWeight: "bold" }}>vantagens competitivas</span>. Com uma abordagem prática e descomplicada, trabalhamos desde o{" "}
+                    <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a <span style={{ fontWeight: "bold" }}>implementação</span> e
+                    acompanhamento do novo modelo, garantindo resultados reais e duradouros.
+                </Typography>
+            </Box>
             <Box sx={{ paddingTop: "3vw" }}>
                 <Box sx={{ flexDirection: "column", flex: 0.4, position: "relative" }}>
-                    <img src="/methodology1.png" style={{ width: "12vw", height: "auto" }} />
-
                     <Box
                         sx={{
                             position: "absolute",
@@ -150,20 +150,20 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
             <Box
                 sx={{
                     flexDirection: "column",
-                    border: `3px solid ${colors.blue}`,
-                    borderTopWidth: 0,
-                    borderBottomWidth: 0,
-                    padding: "5vw",
+                    padding: "5vw 3vw",
                     paddingTop: "10vw",
                     margin: "-5vw",
-                    gap: "5vw",
+                    gap: "8vw",
                 }}
             >
                 <Typography variant="h2" sx={{ fontSize: "8.5rem", color: colors.blue }}>
-                    O que entregamos?
+                    O que <span style={{ color: colors.dark_pink }}>entregamos</span>?
                 </Typography>
 
-                <Box sx={{}}>
+                <Box sx={{ gap: "5vw" }}>
+                    <Box sx={{ flex: 0.8, position: "relative" }}>
+                        <img src="/methodology.png" style={{ position: "absolute", width: "37vw", height: "auto", top: "-3vw", left: 0 }} />
+                    </Box>
                     <Box
                         sx={{
                             flexDirection: "column",
@@ -175,8 +175,6 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             <Item key={item.icon} item={item} alt />
                         ))}
                     </Box>
-
-                    <img src="/methodology2.png" style={{ width: "50vw", height: "auto", margin: "-7vw", marginRight: "-11vw" }} />
                 </Box>
             </Box>
         </Box>

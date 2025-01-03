@@ -65,10 +65,6 @@ export const Contact: React.FC<ContactProps> = ({}) => {
             </Box>
 
             <Box
-                sx={{ position: "absolute", width: "3.5vw", height: "3.5vw", bgcolor: colors.blue, right: "10vw", top: "4vw", borderRadius: "100%" }}
-            />
-
-            <Box
                 sx={{
                     position: "absolute",
                     width: "75vw",
@@ -101,8 +97,6 @@ export const Contact: React.FC<ContactProps> = ({}) => {
                     <Social item={item} key={item.icon} />
                 ))}
             </Box>
-
-            <img src="/contact.png" style={{ position: "absolute", width: "35vw", height: "auto", bottom: 0 }} />
         </Box>
     )
 }
