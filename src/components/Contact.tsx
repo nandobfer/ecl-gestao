@@ -1,6 +1,7 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
+import { links } from "../data/links"
 
 interface ContactProps {}
 
@@ -28,9 +29,9 @@ const Social: React.FC<{ item: SocialItem }> = ({ item }) => (
 
 export const Contact: React.FC<ContactProps> = ({}) => {
     const socials: SocialItem[] = [
-        { icon: "zap", label: "Whatsapp", link: "https://api.whatsapp.com/send?phone=5544998536079" },
-        { icon: "instagram", label: "Instagram", link: "https://www.instagram.com/eclgestao/" },
-        { icon: "linkedin", label: "Linkedin", link: "https://www.linkedin.com/company/eclgest%C3%A3o/" },
+        { icon: "zap", label: "Whatsapp", link: links.whatsapp },
+        { icon: "instagram", label: "Instagram", link: links.instagram },
+        { icon: "linkedin", label: "Linkedin", link: links.linkedin },
     ]
 
     return (
