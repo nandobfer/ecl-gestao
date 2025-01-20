@@ -13,16 +13,21 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
 
     return (
         <Box sx={{ padding: "6vw" }} ref={ref}>
-            <img
-                src="/background.png"
+            <video
+                src="/background.mp4"
                 style={{
                     position: "absolute",
                     width: "100vw",
                     height: "110vh",
+                    objectFit: "cover",
                     zIndex: -1,
                     top: 0,
-                    right: "-2vw",
+                    left: 0,
+                    borderBottomRightRadius: "2vw",
+                    borderBottomLeftRadius: "2vw",
                 }}
+                loop
+                autoPlay
             />
             <Box
                 sx={{
@@ -34,7 +39,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                     background: `linear-gradient(to right, ${colors.blue} 25%, #7B7E8E99 60%, #F5F5F500 80%);`,
                     zIndex: -1,
                     borderBottomLeftRadius: "2vw",
-                    borderTopLeftRadius: "2vw",
+                    borderBottomRightRadius: "2vw",
                 }}
             />
             <Box id="first-view" sx={{ flexDirection: "column", flex: 1, gap: "2vw" }}>
