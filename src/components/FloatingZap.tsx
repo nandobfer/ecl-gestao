@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, IconButton } from "@mui/material"
+import { IconButton } from "@mui/material"
 import { links } from "../data/links"
 
 interface FloatingZapProps {}
