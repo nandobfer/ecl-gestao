@@ -18,7 +18,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                 style={{
                     position: "absolute",
                     width: "100vw",
-                    height: "110vh",
+                    height: "52vw",
                     objectFit: "cover",
                     zIndex: -1,
                     top: 0,
@@ -35,7 +35,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                     top: 0,
                     left: 0,
                     width: "100vw",
-                    height: "110vh",
+                    height: "52vw",
                     background: `linear-gradient(to right, ${colors.blue} 25%, #7B7E8E99 60%, #F5F5F500 80%);`,
                     zIndex: -1,
                     borderBottomLeftRadius: "2vw",
