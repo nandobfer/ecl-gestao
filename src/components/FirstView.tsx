@@ -44,15 +44,15 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
             />
             <Box id="first-view" sx={{ flexDirection: "column", flex: 1, gap: "2vw" }}>
                 <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants()}>
-                    <Typography sx={{ fontSize: "1.835rem", color: colors.light_pink, fontWeight: 700 }}>Modelagem de Negócios</Typography>
+                    <Typography sx={{ fontSize: "1.91446vw", color: colors.light_pink, fontWeight: 700 }}>Modelagem de Negócios</Typography>
                 </motion.div>
                 <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ delay: 0.2 })}>
                     <Typography
                         sx={{
                             color: colors.grey,
                             fontWeight: 700,
-                            fontSize: "4.5rem",
-                            lineHeight: "4.5rem",
+                            fontSize: "4.69485vw",
+                            lineHeight: "4.69485vw",
                             fontFamily: "Yaldevi",
                             width: 0.65,
                         }}

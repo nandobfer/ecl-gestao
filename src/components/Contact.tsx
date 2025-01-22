@@ -19,9 +19,9 @@ const Social: React.FC<{ item: SocialItem }> = ({ item }) => (
         <Typography
             sx={{
                 color: colors.grey,
-                fontSize: "1.8rem",
+                fontSize: "1.87794vw",
                 fontWeight: 500,
-                lineHeight: "2.2rem",
+                lineHeight: "2.29526vw",
                 textDecoration: "underline",
             }}
         >
@@ -61,9 +61,9 @@ export const Contact: React.FC<ContactProps> = ({}) => {
                         color: colors.grey,
                         marginTop: "auto",
                         marginLeft: "auto",
-                        fontSize: "5rem",
+                        fontSize: "5.2165vw",
                         flex: 0.6,
-                        lineHeight: "5rem",
+                        lineHeight: "5.2165vw",
                     }}
                 >
                     Entre em <span style={{ color: colors.light_pink }}>contato</span> e torne sua empresa otimizada

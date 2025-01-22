@@ -23,7 +23,7 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                 <Typography variant="h1" sx={{ color: colors.grey, flex: 0.5 }}>
                     Nosso <span style={{ color: colors.light_pink }}>diferencial</span>
                 </Typography>
-                <Typography sx={{ color: colors.grey, flex: 0.5, fontSize: "1.35rem", fontWeight: 500, lineHeight: "2.2rem" }}>
+                <Typography sx={{ color: colors.grey, flex: 0.5, fontSize: "1.40846vw", fontWeight: 500, lineHeight: "2.29526vw" }}>
                     <span style={{ fontWeight: "bold" }}>Na Ecl Gestão, não entregamos apenas planos, entregamos resultados.</span> Vamos além da
                     teoria, acompanhando cada etapa até que tudo esteja funcionando perfeitamente. Implementamos, testamos e ajustamos lado a lado com
                     você, garantindo não só processos eficientes, mas também{" "}
@@ -43,7 +43,7 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                     }}
                 />
 
-                <Typography sx={{ flex: 0.6, fontSize: "3.1rem", lineHeight: "3rem", color: colors.grey }} variant="h3">
+                <Typography sx={{ flex: 0.6, fontSize: "3.23423vw", lineHeight: "3.1299vw", color: colors.grey }} variant="h3">
                     Porque para nós, <span style={{ color: colors.light_pink }}>crescer sem caos</span> não é apenas possível, é essencial.
                 </Typography>
             </Box>

@@ -16,7 +16,7 @@ export const Cta: React.FC<CtaProps> = (props) => {
             href={props.href}
             sx={{
                 borderRadius: "5vw",
-                fontSize: "2rem",
+                fontSize: "2.0866vw",
                 alignSelf: "flex-start",
                 padding: "1vw 5vw",
                 marginTop: "auto",

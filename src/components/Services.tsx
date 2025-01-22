@@ -25,8 +25,8 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                     color: colors.grey,
                     fontWeight: 700,
                     fontFamily: "Yaldevi",
-                    fontSize: "3rem",
-                    lineHeight: "2.7rem",
+                    fontSize: "3.1299vw",
+                    lineHeight: "2.81691vw",
                 }}
             >
                 <span style={{ color: colors.light_pink }}>{props.title.split(" ")[0]}</span> <br /> {props.title.split(" ").slice(1).join(" ")}
@@ -48,8 +48,8 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
             <Typography
                 sx={{
                     fontWeight: 500,
-                    fontSize: "1.5rem",
-                    lineHeight: "2rem",
+                    fontSize: "1.56495vw",
+                    lineHeight: "2.0866vw",
                 }}
             >
                 {props.description}
@@ -104,8 +104,8 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                             flex: 0.55,
                             alignSelf: "flex-end",
                             fontWeight: 500,
-                            fontSize: "1.85rem",
-                            lineHeight: "2.5rem",
+                            fontSize: "1.9301vw",
+                            lineHeight: "2.60825vw",
                         }}
                     >
                         Método focado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
@@ -208,8 +208,8 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         <Typography
                             sx={{
                                 color: colors.light_pink,
-                                fontSize: "1.9rem",
-                                lineHeight: "1.4rem",
+                                fontSize: "1.98227vw",
+                                lineHeight: "1.46062vw",
                                 width: 0.3,
                                 fontWeight: "bold",
                             }}
@@ -219,7 +219,7 @@ export const Services: React.FC<ServicesProps> = ({}) => {
 
                         <Typography
                             variant="h1"
-                            sx={{ fontSize: "6.5rem", lineHeight: "6.5rem", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
+                            sx={{ fontSize: "6.78145vw", lineHeight: "6.78145vw", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
                         >
                             não entregamos soluções genéricas
                         </Typography>
@@ -257,7 +257,7 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         color: colors.brown,
                     }}
                 >
-                    Ecl Gestão, <span style={{ color: colors.dark_pink, fontSize: "6rem" }}>transformando</span> processos, impulsionando resultados.
+                    Ecl Gestão, <span style={{ color: colors.dark_pink, fontSize: "6.2598vw" }}>transformando</span> processos, impulsionando resultados.
                 </Typography>
                 <img src="/services-2.png" style={{ width: "35vw", height: "auto", marginTop: "-2.3vw", marginLeft: "2vw" }} />
             </Box>

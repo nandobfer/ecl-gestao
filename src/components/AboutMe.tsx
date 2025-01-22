@@ -9,7 +9,7 @@ interface AboutMeProps {}
 
 const JourneyFeature: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <Box sx={{ gap: "1vw" }}>
-        <Typography variant="h4" sx={{ color: colors.light_pink, fontSize: "1.5rem" }}>
+        <Typography variant="h4" sx={{ color: colors.light_pink, fontSize: "1.56495vw" }}>
             ✷
         </Typography>
         <Typography variant="h4">{children}</Typography>
@@ -45,7 +45,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                         <Typography variant="h2" sx={{ color: colors.grey }}>
                             Karen Miniacci
                         </Typography>
-                        <Typography sx={{ fontWeight: "bold", fontSize: "1.72rem", lineHeight: "2rem", color: colors.light_pink }}>
+                        <Typography sx={{ fontWeight: "bold", fontSize: "1.79448vw", lineHeight: "2.0866vw", color: colors.light_pink }}>
                             Fundadora e Consultora Líder
                         </Typography>
                     </motion.div>
@@ -85,10 +85,10 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
             </Box>
 
             <Box sx={{ paddingTop: "6vw", gap: "3vw", alignItems: "center", flexDirection: "column" }}>
-                <Typography variant="h5" sx={{ fontSize: "3.6rem" }}>
+                <Typography variant="h5" sx={{ fontSize: "3.75588vw" }}>
                     “A chave para o sucesso é conseguir equilibrar na prática pessoas, processos e tecnologia em um ecossistema funcional e eficiente”
                 </Typography>
-                <Typography sx={{ fontSize: "1.835rem", color: colors.light_pink, fontWeight: 700 }}>⎯ Karen Miniacci</Typography>
+                <Typography sx={{ fontSize: "1.91446vw", color: colors.light_pink, fontWeight: 700 }}>⎯ Karen Miniacci</Typography>
                 <Typography variant="body2" sx={{ color: colors.grey, textAlign: "center" }}>
                     e mais do que acreditar, ela vivencia todos os dias esse método e cada projeto é uma oportunidade de transformar negócios e
                     construir legados.

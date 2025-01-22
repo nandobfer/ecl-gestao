@@ -18,9 +18,9 @@ const Item: React.FC<{ item: ItemData; alt?: boolean }> = ({ item, alt }) => (
         <Typography
             sx={{
                 color: alt ? colors.blue : colors.grey,
-                fontSize: "1.5rem",
+                fontSize: "1.56495vw",
                 fontWeight: 500,
-                lineHeight: "2.2rem",
+                lineHeight: "2.29526vw",
             }}
         >
             <span style={{ fontWeight: "bold" }}>{item.title}</span>
@@ -88,8 +88,8 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             color: colors.dark_pink,
                             fontWeight: "bold",
                             fontFamily: "Yaldevi",
-                            fontSize: "2.7rem",
-                            lineHeight: "2.7rem",
+                            fontSize: "2.81691vw",
+                            lineHeight: "2.81691vw",
                         }}
                     >
                         Nosso Método & Entregáveis
@@ -113,7 +113,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                     animate={inView ? "animate" : "initial"}
                     variants={animationVariants({ opacityOnly: true, delay: 1 })}
                 >
-                    <Typography variant="body2" sx={{ color: colors.blue, fontSize: "2rem" }}>
+                    <Typography variant="body2" sx={{ color: colors.blue, fontSize: "2.0866vw" }}>
                         Nosso método é baseado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
                         <span style={{ fontWeight: "bold" }}>vantagens competitivas</span>. Com uma abordagem prática e descomplicada, trabalhamos
                         desde o <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a{" "}
@@ -137,7 +137,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                         }}
                     >
                         <motion.div style={{}} initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({})}>
-                            <Typography variant="h2" sx={{ fontSize: "5rem", color: colors.grey, lineHeight: "5rem" }}>
+                            <Typography variant="h2" sx={{ fontSize: "5.2165vw", color: colors.grey, lineHeight: "5.2165vw" }}>
                                 Como <span style={{ color: colors.light_pink }}>funciona</span> o nosso processo?
                             </Typography>
                         </motion.div>
@@ -193,7 +193,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                 }}
             >
                 <motion.div initial="initial" animate={inView3 ? "animate" : "initial"} variants={animationVariants({ vertical: true })}>
-                    <Typography variant="h2" sx={{ fontSize: "8.5rem", color: colors.blue }}>
+                    <Typography variant="h2" sx={{ fontSize: "8.86805vw", color: colors.blue }}>
                         O que <span style={{ color: colors.dark_pink }}>entregamos</span>?
                     </Typography>
                 </motion.div>

@@ -27,9 +27,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                 <Typography
                     sx={{
                         color: colors.blue,
-                        fontSize: "1.49rem",
+                        fontSize: "1.55452vw",
                         fontWeight: 500,
-                        lineHeight: "2.2rem",
+                        lineHeight: "2.29526vw",
                     }}
                 >
                     Na <span style={{ fontWeight: "bold" }}>Ecl Gestão</span>, desde 2015, somos mais do que uma consultoria em modelagem de negócios:{" "}
@@ -62,9 +62,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                         sx={{
                             color: colors.blue,
 
-                            fontSize: "1.49rem",
+                            fontSize: "1.55452vw",
                             fontWeight: 500,
-                            lineHeight: "2.2rem",
+                            lineHeight: "2.29526vw",
                         }}
                     >
                         Mais do que teoria, enfrentamos os desafios de empreender e estruturar negócios. Isso nos dá uma visão única para oferecer
@@ -81,9 +81,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                 sx={{
                     color: colors.blue,
 
-                    fontSize: "1.49rem",
+                    fontSize: "1.55452vw",
                     fontWeight: 500,
-                    lineHeight: "2.2rem",
+                    lineHeight: "2.29526vw",
                 }}
             >
                 Sabe aquele departamento comercial onde cada vendedor “faz do seu jeito”, os contratos ficam travados por dias sem inicio e os
@@ -96,9 +96,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                 sx={{
                     color: colors.blue,
 
-                    fontSize: "1.49rem",
+                    fontSize: "1.55452vw",
                     fontWeight: 500,
-                    lineHeight: "2.2rem",
+                    lineHeight: "2.29526vw",
                 }}
             >
                 E é exatamente aqui que a<span style={{ fontWeight: "bold" }}> Ecl Gestão entra em ação:</span> organizamos o caos, estruturamos

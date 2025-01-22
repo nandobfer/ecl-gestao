@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                     sx={{
                         padding: "2vw",
                         paddingTop: "3vw",
-                        fontSize: "1.5rem",
+                        fontSize: "1.56495vw",
                         color: colors.grey,
                         borderBottomRightRadius: "2vw",
                         borderBottomLeftRadius: "2vw",
@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                             sx={{
                                 borderRadius: "5vw",
                                 fontWeight: 600,
-                                fontSize: "1.5rem",
+                                fontSize: "1.56495vw",
                                 padding: "0 1.7vw",
                                 height: "3vw",
                                 borderWidth: "2px",
