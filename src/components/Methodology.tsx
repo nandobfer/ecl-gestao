@@ -87,7 +87,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                         sx={{
                             color: colors.dark_pink,
                             fontWeight: "bold",
-                            fontFamily: "Yaldevi",
+                            fontFamily: "Playfair Display",
                             fontSize: "2.81691vw",
                             lineHeight: "2.81691vw",
                         }}

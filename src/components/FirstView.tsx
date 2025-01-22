@@ -53,7 +53,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                             fontWeight: 700,
                             fontSize: "4.69485vw",
                             lineHeight: "4.69485vw",
-                            fontFamily: "Yaldevi",
+                            fontFamily: "Playfair Display",
                             width: 0.65,
                         }}
                     >

@@ -24,7 +24,7 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                 sx={{
                     color: colors.grey,
                     fontWeight: 700,
-                    fontFamily: "Yaldevi",
+                    fontFamily: "Playfair Display",
                     fontSize: "3.1299vw",
                     lineHeight: "2.81691vw",
                 }}

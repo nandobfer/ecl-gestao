@@ -48,7 +48,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                     style={{ flex: 0.4 }}
                 >
                     <Typography variant="h5" sx={{ color: colors.blue }}>
-                        Nosso diferencial? Vivência <span style={{ color: colors.dark_pink, fontFamily: "Yaldevi" }}>real</span>.
+                        Nosso diferencial? Vivência <span style={{ color: colors.dark_pink, fontFamily: "Playfair Display" }}>real</span>.
                     </Typography>
                 </motion.div>
 
