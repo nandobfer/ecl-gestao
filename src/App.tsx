@@ -11,6 +11,7 @@ import { Methodology } from "./components/Methodology"
 import { Differences } from "./components/Differences"
 import { Contact } from "./components/Contact"
 import { FloatingZap } from "./components/FloatingZap"
+import { Footer } from "./components/Footer"
 
 export const App: React.FC<{}> = () => {
     const theme = useTheme()
@@ -25,6 +26,7 @@ export const App: React.FC<{}> = () => {
             <Methodology />
             <Differences />
             <Contact />
+            <Footer />
             <FloatingZap />
         </ThemeProvider>
     )

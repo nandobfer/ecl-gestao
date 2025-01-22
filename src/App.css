@@ -115,10 +115,10 @@ img {
     height: 5px;
   }
 
-  ::selection {
+  /* ::selection {
     color: white;
     background: #00AFEF
-}
+} */
 
 .link {
     cursor: pointer;
