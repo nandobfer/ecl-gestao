@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
                 {new Date().getFullYear()} © Direitos Reservados - {version}
             </Typography>
             <Typography>
-                Powered by <span style={{ fontWeight: "bold" }}>Studio Criativo</span> & <span style={{ fontWeight: "bold" }}>BOZ</span>
+                Powered by <span style={{ fontWeight: "bold" }}>Studio Criativo Co</span> & <span style={{ fontWeight: "bold" }}>BOZ</span>
             </Typography>
         </Box>
     )
