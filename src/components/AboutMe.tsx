@@ -52,7 +52,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
 
                     <Box sx={{ position: "absolute", bottom: "-3vw", left: 0, zIndex: 3 }}>
                         <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ delay: 0.4 })}>
-                            <img src="/karen.png" style={{ width: "33vw", height: "auto" }} />
+                            <img src="/karen2.png" style={{ width: "33vw", height: "auto" }} />
                         </motion.div>
                     </Box>
                 </Box>
