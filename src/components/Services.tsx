@@ -178,7 +178,21 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         animate={inView3 ? "animate" : "initial"}
                         variants={animationVariants({ reversed: true })}
                     >
-                        <img src="/services.png" style={{ width: "50vw", height: "auto", zIndex: 2 }} />
+                        {/* <img src="/services.png" style={{ width: "50vw", height: "auto", zIndex: 2 }} /> */}
+                        <video
+                            src="/solutions.mp4"
+                            autoPlay
+                            loop
+                            style={{
+                                width: "50vw",
+                                height: "35vw",
+                                objectFit: "cover",
+                                zIndex: 2,
+                                borderRadius: "3vw",
+                                borderTopRightRadius: 0,
+                                borderBottomRightRadius: 0,
+                            }}
+                        />
                     </motion.div>
                     <motion.div
                         initial="initial"
@@ -257,7 +271,8 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         color: colors.brown,
                     }}
                 >
-                    Ecl Gestão, <span style={{ color: colors.dark_pink, fontSize: "6.2598vw" }}>transformando</span> processos, impulsionando resultados.
+                    Ecl Gestão, <span style={{ color: colors.dark_pink, fontSize: "6.2598vw" }}>transformando</span> processos, impulsionando
+                    resultados.
                 </Typography>
                 <img src="/services-2.png" style={{ width: "35vw", height: "auto", marginTop: "-2.3vw", marginLeft: "2vw" }} />
             </Box>

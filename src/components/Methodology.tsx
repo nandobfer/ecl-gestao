@@ -206,10 +206,25 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             animate={inView3 ? "animate" : "initial"}
                             variants={animationVariants({})}
                         >
-                            <img
+                            <video
+                                src="/deliver.mp4"
+                                autoPlay
+                                loop
+                                style={{
+                                    position: "absolute",
+                                    width: "37vw",
+                                    height: "50vw",
+                                    top: "-3vw",
+                                    left: 0,
+                                    zIndex: 2,
+                                    objectFit: "cover",
+                                    borderRadius: "5vw",
+                                }}
+                            />
+                            {/* <img
                                 src="/methodology.png"
                                 style={{ position: "absolute", width: "37vw", height: "auto", top: "-3vw", left: 0, zIndex: 2 }}
-                            />
+                            /> */}
                         </motion.div>
                     </Box>
                     <Box
