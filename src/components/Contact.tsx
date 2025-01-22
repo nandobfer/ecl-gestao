@@ -2,6 +2,9 @@ import React from "react"
 import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
 import { links } from "../data/links"
+import { motion } from "framer-motion"
+import { useInView } from "../hooks/useInView"
+import { animationVariants } from "../animationVariants"
 
 interface ContactProps {}
 
@@ -28,6 +31,8 @@ const Social: React.FC<{ item: SocialItem }> = ({ item }) => (
 )
 
 export const Contact: React.FC<ContactProps> = ({}) => {
+    const { ref, inView } = useInView()
+
     const socials: SocialItem[] = [
         { icon: "zap", label: "Whatsapp", link: links.whatsapp },
         { icon: "instagram", label: "Instagram", link: links.instagram },
@@ -93,9 +98,17 @@ export const Contact: React.FC<ContactProps> = ({}) => {
                     borderTopLeftRadius: "5vw",
                     borderBottomLeftRadius: "5vw",
                 }}
+                ref={ref}
             >
-                {socials.map((item) => (
-                    <Social item={item} key={item.icon} />
+                {socials.map((item, index) => (
+                    <motion.div
+                        key={item.icon}
+                        initial="initial"
+                        animate={inView ? "animate" : "initial"}
+                        variants={animationVariants({ reversed: true, delay: index * 0.5 })}
+                    >
+                        <Social item={item} />
+                    </motion.div>
                 ))}
             </Box>
         </Box>

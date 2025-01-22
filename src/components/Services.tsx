@@ -61,6 +61,7 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
 export const Services: React.FC<ServicesProps> = ({}) => {
     const { ref, inView } = useInView()
     const { ref: ref2, inView: inView2 } = useInView()
+    const { ref: ref3, inView: inView3 } = useInView()
 
     return (
         <Box ref={ref} id="services" sx={{ flexDirection: "column", padding: "7vw", paddingTop: "11vw", gap: "10vw" }}>
@@ -161,7 +162,7 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                 otimize sua empresa
             </Cta>
 
-            <Box sx={{ position: "relative", margin: "-5vw -7vw" }}>
+            <Box ref={ref3} sx={{ position: "relative", margin: "-5vw -7vw" }}>
                 <Box
                     sx={{
                         position: "absolute",
@@ -171,54 +172,69 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         gap: "3vw",
                     }}
                 >
-                    <img src="/services.png" style={{ width: "50vw", height: "auto", zIndex: 2 }} />
-                    <Typography variant="body2" sx={{ marginLeft: "8vw", width: "40vw" }}>
-                        O que nos motiva é ver cada cliente <span style={{ fontWeight: 700 }}>atingindo novos patamares</span>. Afinal, quando você
-                        cresce de forma sustentável, <span style={{ fontWeight: 700 }}>nós crescemos juntos</span>.
-                    </Typography>
+                    <motion.div
+                        style={{ zIndex: 2 }}
+                        initial="initial"
+                        animate={inView3 ? "animate" : "initial"}
+                        variants={animationVariants({ reversed: true })}
+                    >
+                        <img src="/services.png" style={{ width: "50vw", height: "auto", zIndex: 2 }} />
+                    </motion.div>
+                    <motion.div
+                        initial="initial"
+                        animate={inView3 ? "animate" : "initial"}
+                        variants={animationVariants({ delay: 1, reversed: true })}
+                    >
+                        <Typography variant="body2" sx={{ marginLeft: "8vw", width: "40vw" }}>
+                            O que nos motiva é ver cada cliente <span style={{ fontWeight: 700 }}>atingindo novos patamares</span>. Afinal, quando
+                            você cresce de forma sustentável, <span style={{ fontWeight: 700 }}>nós crescemos juntos</span>.
+                        </Typography>
+                    </motion.div>
                 </Box>
 
-                <Box
-                    sx={{
-                        bgcolor: colors.dark_pink,
-                        width: 0.545,
-                        borderTopRightRadius: "2vw",
-                        borderBottomRightRadius: "2vw",
-                        padding: "6.2vw",
-                        whiteSpace: "break-spaces",
-                        flexDirection: "column",
-                        gap: "3vw",
-                    }}
-                >
-                    <Typography
+                <motion.div initial="initial" animate={inView3 ? "animate" : "initial"} variants={animationVariants({ delay: 0.5 })}>
+                    <Box
                         sx={{
-                            color: colors.light_pink,
-                            fontSize: "1.9rem",
-                            lineHeight: "1.4rem",
-                            width: 0.3,
-                            fontWeight: "bold",
+                            bgcolor: colors.dark_pink,
+                            width: 0.545,
+                            borderTopRightRadius: "2vw",
+                            borderBottomRightRadius: "2vw",
+                            padding: "6.2vw",
+                            whiteSpace: "break-spaces",
+                            flexDirection: "column",
+                            gap: "3vw",
                         }}
                     >
-                        Diferente de outras consultorias,
-                    </Typography>
+                        <Typography
+                            sx={{
+                                color: colors.light_pink,
+                                fontSize: "1.9rem",
+                                lineHeight: "1.4rem",
+                                width: 0.3,
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Diferente de outras consultorias,
+                        </Typography>
 
-                    <Typography
-                        variant="h1"
-                        sx={{ fontSize: "6.5rem", lineHeight: "6.5rem", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
-                    >
-                        não entregamos soluções genéricas
-                    </Typography>
+                        <Typography
+                            variant="h1"
+                            sx={{ fontSize: "6.5rem", lineHeight: "6.5rem", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
+                        >
+                            não entregamos soluções genéricas
+                        </Typography>
 
-                    <Typography
-                        variant="body2"
-                        sx={{
-                            color: colors.grey,
-                        }}
-                    >
-                        Nosso foco é criar <span style={{ fontWeight: 700 }}>resultados sustentáveis</span> e{" "}
-                        <span style={{ fontWeight: 700 }}>contínuos</span>, colocando ordem no caos e trazendo clareza à sua operação.
-                    </Typography>
-                </Box>
+                        <Typography
+                            variant="body2"
+                            sx={{
+                                color: colors.grey,
+                            }}
+                        >
+                            Nosso foco é criar <span style={{ fontWeight: 700 }}>resultados sustentáveis</span> e{" "}
+                            <span style={{ fontWeight: 700 }}>contínuos</span>, colocando ordem no caos e trazendo clareza à sua operação.
+                        </Typography>
+                    </Box>
+                </motion.div>
 
                 <Box
                     sx={{

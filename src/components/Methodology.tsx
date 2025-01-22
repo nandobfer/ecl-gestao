@@ -1,6 +1,9 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
+import { useInView } from "../hooks/useInView"
+import { motion } from "framer-motion"
+import { animationVariants } from "../animationVariants"
 
 interface MethodologyProps {}
 interface ItemData {
@@ -27,6 +30,10 @@ const Item: React.FC<{ item: ItemData; alt?: boolean }> = ({ item, alt }) => (
 )
 
 export const Methodology: React.FC<MethodologyProps> = ({}) => {
+    const { ref, inView } = useInView()
+    const { ref: ref2, inView: inView2 } = useInView()
+    const { ref: ref3, inView: inView3 } = useInView()
+
     const how_works: ItemData[] = [
         {
             icon: "map",
@@ -73,30 +80,49 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
     ]
 
     return (
-        <Box id="methodology" sx={{ padding: "10vw", paddingTop: 0, flexDirection: "column", gap: "2vw", position: "relative" }}>
+        <Box ref={ref} id="methodology" sx={{ padding: "10vw", paddingTop: 0, flexDirection: "column", gap: "2vw", position: "relative" }}>
             <Box sx={{ bgcolor: colors.light_pink, borderRadius: "3vw", flexDirection: "column", margin: "-10vw", padding: "10vw", zIndex: -1 }}>
-                <Typography
-                    sx={{
-                        color: colors.dark_pink,
-                        fontWeight: "bold",
-                        fontFamily: "Yaldevi",
-                        fontSize: "2.7rem",
-                        lineHeight: "2.7rem",
-                    }}
+                <motion.div style={{}} initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ opacityOnly: true })}>
+                    <Typography
+                        sx={{
+                            color: colors.dark_pink,
+                            fontWeight: "bold",
+                            fontFamily: "Yaldevi",
+                            fontSize: "2.7rem",
+                            lineHeight: "2.7rem",
+                        }}
+                    >
+                        Nosso Método & Entregáveis
+                    </Typography>
+                </motion.div>
+
+                <motion.div
+                    style={{}}
+                    initial="initial"
+                    animate={inView ? "animate" : "initial"}
+                    variants={animationVariants({ opacityOnly: true, delay: 0.5 })}
                 >
-                    Nosso Método & Entregáveis
-                </Typography>
-                <Typography variant="h6">
-                    Uma metodologia <span style={{ color: colors.dark_pink }}>exclusiva</span> para resultados sustentáveis
-                </Typography>
-                <Typography variant="body2" sx={{ color: colors.blue, fontSize: "2rem" }}>
-                    Nosso método é baseado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
-                    <span style={{ fontWeight: "bold" }}>vantagens competitivas</span>. Com uma abordagem prática e descomplicada, trabalhamos desde o{" "}
-                    <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a <span style={{ fontWeight: "bold" }}>implementação</span> e
-                    acompanhamento do novo modelo, garantindo resultados reais e duradouros.
-                </Typography>
+                    <Typography variant="h6">
+                        Uma metodologia <span style={{ color: colors.dark_pink }}>exclusiva</span> para resultados sustentáveis
+                    </Typography>
+                </motion.div>
+
+                <motion.div
+                    style={{}}
+                    initial="initial"
+                    animate={inView ? "animate" : "initial"}
+                    variants={animationVariants({ opacityOnly: true, delay: 1 })}
+                >
+                    <Typography variant="body2" sx={{ color: colors.blue, fontSize: "2rem" }}>
+                        Nosso método é baseado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
+                        <span style={{ fontWeight: "bold" }}>vantagens competitivas</span>. Com uma abordagem prática e descomplicada, trabalhamos
+                        desde o <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a{" "}
+                        <span style={{ fontWeight: "bold" }}>implementação</span> e acompanhamento do novo modelo, garantindo resultados reais e
+                        duradouros.
+                    </Typography>
+                </motion.div>
             </Box>
-            <Box sx={{ paddingTop: "3vw" }}>
+            <Box sx={{ paddingTop: "3vw" }} ref={ref2}>
                 <Box sx={{ flexDirection: "column", flex: 0.4, position: "relative" }}>
                     <Box
                         sx={{
@@ -110,9 +136,11 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             borderBottomRightRadius: "2vw",
                         }}
                     >
-                        <Typography variant="h2" sx={{ fontSize: "5rem", color: colors.grey, lineHeight: "5rem" }}>
-                            Como <span style={{ color: colors.light_pink }}>funciona</span> o nosso processo?
-                        </Typography>
+                        <motion.div style={{}} initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({})}>
+                            <Typography variant="h2" sx={{ fontSize: "5rem", color: colors.grey, lineHeight: "5rem" }}>
+                                Como <span style={{ color: colors.light_pink }}>funciona</span> o nosso processo?
+                            </Typography>
+                        </motion.div>
                     </Box>
 
                     <Box
@@ -141,13 +169,21 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                         gap: "4vw",
                     }}
                 >
-                    {how_works.map((item) => (
-                        <Item key={item.icon} item={item} />
+                    {how_works.map((item, index) => (
+                        <motion.div
+                            key={item.icon}
+                            initial="initial"
+                            animate={inView2 ? "animate" : "initial"}
+                            variants={animationVariants({ delay: 0.5 + index * 0.5, reversed: true })}
+                        >
+                            <Item item={item} />
+                        </motion.div>
                     ))}
                 </Box>
             </Box>
 
             <Box
+                ref={ref3}
                 sx={{
                     flexDirection: "column",
                     padding: "5vw 3vw",
@@ -156,16 +192,25 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                     gap: "8vw",
                 }}
             >
-                <Typography variant="h2" sx={{ fontSize: "8.5rem", color: colors.blue }}>
-                    O que <span style={{ color: colors.dark_pink }}>entregamos</span>?
-                </Typography>
+                <motion.div initial="initial" animate={inView3 ? "animate" : "initial"} variants={animationVariants({ vertical: true })}>
+                    <Typography variant="h2" sx={{ fontSize: "8.5rem", color: colors.blue }}>
+                        O que <span style={{ color: colors.dark_pink }}>entregamos</span>?
+                    </Typography>
+                </motion.div>
 
                 <Box sx={{ gap: "5vw" }}>
                     <Box sx={{ flex: 0.8, position: "relative" }}>
-                        <img
-                            src="/methodology.png"
-                            style={{ position: "absolute", width: "37vw", height: "auto", top: "-3vw", left: 0, zIndex: 2 }}
-                        />
+                        <motion.div
+                            style={{ zIndex: 2 }}
+                            initial="initial"
+                            animate={inView3 ? "animate" : "initial"}
+                            variants={animationVariants({})}
+                        >
+                            <img
+                                src="/methodology.png"
+                                style={{ position: "absolute", width: "37vw", height: "auto", top: "-3vw", left: 0, zIndex: 2 }}
+                            />
+                        </motion.div>
                     </Box>
                     <Box
                         sx={{
@@ -174,8 +219,15 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             flex: 1,
                         }}
                     >
-                        {results.map((item) => (
-                            <Item key={item.icon} item={item} alt />
+                        {results.map((item, index) => (
+                            <motion.div
+                                key={item.icon}
+                                initial="initial"
+                                animate={inView3 ? "animate" : "initial"}
+                                variants={animationVariants({ delay: 0.5 + index * 0.5, reversed: true })}
+                            >
+                                <Item item={item} alt />
+                            </motion.div>
                         ))}
                     </Box>
                 </Box>
