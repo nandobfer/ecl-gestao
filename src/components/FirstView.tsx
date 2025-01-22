@@ -12,13 +12,13 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
     const { ref, inView } = useInView()
 
     return (
-        <Box sx={{ padding: "6vw" }} ref={ref}>
+        <Box sx={{ padding: "6vw", paddingTop: "2vw" }} ref={ref}>
             <video
                 src="/background.mp4"
                 style={{
                     position: "absolute",
                     width: "100vw",
-                    height: "52vw",
+                    height: "48vw",
                     objectFit: "cover",
                     zIndex: -1,
                     top: 0,
@@ -35,7 +35,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                     top: 0,
                     left: 0,
                     width: "100vw",
-                    height: "52vw",
+                    height: "48vw",
                     background: `linear-gradient(to right, ${colors.blue} 25%, #7B7E8E99 60%, #F5F5F500 80%);`,
                     zIndex: -1,
                     borderBottomLeftRadius: "2vw",

@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
     return (
         <motion.div initial="initial" animate="animate" variants={animationVariants({ vertical: true })}>
-            <Box sx={{ padding: "0 6vw", paddingBottom: "2vw" }}>
+            <Box sx={{ padding: "0 6vw" }}>
                 <MenuItem
                     href="#"
                     sx={{
