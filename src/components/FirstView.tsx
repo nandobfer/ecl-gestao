@@ -57,7 +57,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                             width: 0.65,
                         }}
                     >
-                        Transformamos processos em resultados através da tríade: pessoas, processos & tecnologia
+                        Resultados por meio de otimização de processos: Pessoas, processos e tecnologia em sintonia.
                     </Typography>
                 </motion.div>
 

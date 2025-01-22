@@ -77,13 +77,16 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                         margin: "-4vw",
                         marginTop: "-12vw",
                         zIndex: -1,
-                        padding: "3vw",
+                        padding: "5vw",
                         paddingTop: "9vw",
                         paddingBottom: "5vw",
                         borderRadius: "3vw",
                         borderTopRightRadius: 0,
                         borderTopLeftRadius: 0,
                         position: "relative",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: "4vw",
                     }}
                 >
                     <Typography
@@ -104,9 +107,10 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                             lineHeight: "2.5rem",
                         }}
                     >
-                        Aqui, <span style={{ fontWeight: 700 }}>mapeamos</span> e <span style={{ fontWeight: 700 }}>revolucionamos</span> a operação
-                        do seu negócio. Nossa <span style={{ fontWeight: 700 }}>metodologia exclusiva</span> nos permite atuar com precisão em cada
-                        etapa:
+                        Método focado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
+                        <span style={{ fontWeight: "bold" }}>vantagens competitivas.</span> Abordagem prática e descomplicada desde o{" "}
+                        <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a <span style={{ fontWeight: "bold" }}>implementação</span>,
+                        garantindo resultados reais e duradouros.
                     </Typography>
 
                     <Box

@@ -84,13 +84,12 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                 </motion.div>
             </Box>
 
-            <Box sx={{ paddingTop: "6vw", gap: "3vw", alignItems: "center" }}>
-                <Typography variant="h5" sx={{ flex: 0.6, fontSize: "3.6rem" }}>
-                    A <span style={{ color: colors.light_pink }}>chave para o sucesso</span> é unir pessoas, processos e tecnologia em um sistema
-                    funcional e eficiente
+            <Box sx={{ paddingTop: "6vw", gap: "3vw", alignItems: "center", flexDirection: "column" }}>
+                <Typography variant="h5" sx={{ fontSize: "3.6rem" }}>
+                    “A chave para o sucesso é conseguir equilibrar na prática pessoas, processos e tecnologia em um ecossistema funcional e eficiente”
                 </Typography>
-                <hr style={{ height: "100%", color: colors.light_pink, border: `2px solid ${colors.light_pink}` }} />
-                <Typography variant="body2" sx={{ flex: 0.4, color: colors.grey }}>
+                <Typography sx={{ fontSize: "1.835rem", color: colors.light_pink, fontWeight: 700 }}>⎯ Karen Miniacci</Typography>
+                <Typography variant="body2" sx={{ color: colors.grey, textAlign: "center" }}>
                     e mais do que acreditar, ela vivencia todos os dias esse método e cada projeto é uma oportunidade de transformar negócios e
                     construir legados.
                 </Typography>

@@ -24,11 +24,10 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                     Nosso <span style={{ color: colors.light_pink }}>diferencial</span>
                 </Typography>
                 <Typography sx={{ color: colors.grey, flex: 0.5, fontSize: "1.35rem", fontWeight: 500, lineHeight: "2.2rem" }}>
-                    Enquanto muitos param na teoria, <span style={{ fontWeight: "bold" }}>a Ecl Gestão vai até o "Go Live"</span>, de mãos dadas com
-                    cada cliente até que os resultados planejados se concretizem.{" "}
-                    <span style={{ fontWeight: "bold" }}>Implementamos, testamos e ajustamos</span> até que cada detalhe funcione. Com isso,
-                    entregamos algo que vai além de processos: entregamos{" "}
-                    <span style={{ fontWeight: "bold" }}>tranquilidade, sustentabilidade e crescimento</span> real para sua empresa.
+                    <span style={{ fontWeight: "bold" }}>Na Ecl Gestão, não entregamos apenas planos, entregamos resultados.</span> Vamos além da
+                    teoria, acompanhando cada etapa até que tudo esteja funcionando perfeitamente. Implementamos, testamos e ajustamos lado a lado com
+                    você, garantindo não só processos eficientes, mas também{" "}
+                    <span style={{ fontWeight: "bold" }}>tranquilidade, crescimento sustentável e resultados reais.</span>
                 </Typography>
             </Box>
 
