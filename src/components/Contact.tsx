@@ -2,6 +2,7 @@ import React from "react"
 import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
 import { Socials } from "./Socials"
+import { Map } from "./Map"
 
 interface ContactProps {}
 
@@ -50,8 +51,10 @@ export const Contact: React.FC<ContactProps> = ({}) => {
                 <img src={"/logo.svg"} style={{ width: "30vw", height: "auto" }} />
 
                 <Box sx={{ gap: "2vw", color: colors.grey, width: 1 }}>
-                    <Box sx={{ flex: 0.5 }}>mapa</Box>
-                    <Box sx={{ flex: 0.5, flexDirection: "column", gap: "2vw" }}>
+                    <Box sx={{ flex: 0.45 }}>
+                        <Map />
+                    </Box>
+                    <Box sx={{ flex: 0.55, flexDirection: "column", gap: "2vw" }}>
                         <Typography
                             sx={{
                                 color: colors.grey,
