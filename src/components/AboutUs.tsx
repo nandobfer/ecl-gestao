@@ -21,6 +21,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                 flexDirection: "column",
                 padding: isMobile ? "10vw 12vw 10vw" : "6vw 12vw 6vw",
                 gap: isMobile ? "8vw" : "4vw",
+                overflowX: "hidden",
             }}
         >
             <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ opacityOnly: true })}>

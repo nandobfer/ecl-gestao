@@ -81,7 +81,7 @@ export const Services: React.FC<ServicesProps> = ({}) => {
     const isMobile = useMediaQuery("(orientation: portrait)")
 
     return (
-        <Box ref={ref} id="services" sx={{ flexDirection: "column", padding: "7vw", paddingTop: "11vw", gap: "10vw" }}>
+        <Box ref={ref} id="services" sx={{ flexDirection: "column", padding: "7vw", paddingTop: "11vw", gap: "10vw", overflowX: "hidden" }}>
             <motion.div
                 style={{ zIndex: -1 }}
                 initial="initial"

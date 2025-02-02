@@ -15,7 +15,7 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
     const video_height = isMobile ? "130vw" : "48vw"
 
     return (
-        <Box sx={{ padding: isMobile ? "10vw" : "6vw", paddingTop: "2vw" }} ref={ref}>
+        <Box sx={{ padding: isMobile ? "10vw" : "6vw", paddingTop: "2vw", overflowX: "hidden" }} ref={ref}>
             <video
                 src="/background.mp4"
                 style={{

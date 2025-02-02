@@ -91,7 +91,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
             id="methodology"
             sx={{
                 padding: "10vw",
-                paddingTop: 0,
+                paddingTop: isMobile ? undefined : 0,
                 flexDirection: "column",
                 gap: "2vw",
                 position: "relative",

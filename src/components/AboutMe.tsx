@@ -38,6 +38,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                 padding: "6.2vw",
                 paddingTop: "8.2vw",
                 flexDirection: "column",
+                overflowX: "hidden",
             }}
         >
             <Box sx={{ position: "relative", flexDirection: isMobile ? "column" : "row" }}>
