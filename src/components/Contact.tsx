@@ -1,115 +1,82 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
 import { colors } from "../style/colors"
-import { links } from "../data/links"
-import { motion } from "framer-motion"
-import { useInView } from "../hooks/useInView"
-import { animationVariants } from "../animationVariants"
+import { Socials } from "./Socials"
 
 interface ContactProps {}
 
-interface SocialItem {
-    icon: string
-    label: string
-    link: string
-}
-const Social: React.FC<{ item: SocialItem }> = ({ item }) => (
-    <Box sx={{ gap: "1vw", flex: 1, cursor: "pointer" }} onClick={() => window.open(item.link, "_new")}>
-        <img src={`/icons/${item.icon}.svg`} style={{ width: "2vw", height: "2vw" }} />
-        <Typography
-            sx={{
-                color: colors.grey,
-                fontSize: "1.87794vw",
-                fontWeight: 500,
-                lineHeight: "2.29526vw",
-                textDecoration: "underline",
-            }}
-        >
-            {item.label}
-        </Typography>
-    </Box>
-)
-
 export const Contact: React.FC<ContactProps> = ({}) => {
-    const { ref, inView } = useInView()
-
-    const socials: SocialItem[] = [
-        { icon: "zap", label: "Whatsapp", link: links.whatsapp },
-        { icon: "instagram", label: "Instagram", link: links.instagram },
-        { icon: "linkedin", label: "Linkedin", link: links.linkedin },
-    ]
-
     return (
-        <Box id="contact" sx={{ padding: "0 5vw", height: "90vh", position: "relative" }}>
+        <Box id="contact" sx={{ flexDirection: "column" }}>
             <Box
                 sx={{
-                    bgcolor: colors.dark_pink,
-                    paddingRight: "7vw",
-                    paddingBottom: "10vw",
+                    padding: "4vw 8vw",
                     flex: 1,
                     borderBottomLeftRadius: "5vw",
                     borderBottomRightRadius: "5vw",
-                    height: "80vh",
-                    justifyContent: "flex-end",
-                    alignItems: "flex-end",
-                    zIndex: -1,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "column",
+                    gap: "3vw",
                 }}
             >
                 <Typography
                     variant="h2"
                     sx={{
-                        color: colors.grey,
-                        marginTop: "auto",
-                        marginLeft: "auto",
-                        fontSize: "5.2165vw",
-                        flex: 0.6,
-                        lineHeight: "5.2165vw",
+                        color: colors.blue,
+                        fontSize: "5.7vw",
+                        lineHeight: "5.7vw",
                     }}
                 >
-                    Entre em <span style={{ color: colors.light_pink }}>contato</span> e torne sua empresa otimizada
+                    Entre em contato agora e torne sua empresa <span style={{ color: colors.dark_pink }}>mais eficiente</span>
                 </Typography>
+
+                <img src="/icons/arrow-down.svg" style={{ width: "4vw", height: "auto" }} />
             </Box>
 
             <Box
                 sx={{
-                    position: "absolute",
-                    width: "75vw",
-                    height: "75vw",
-                    left: "-37.5vw",
-                    top: "-37.5vw",
-                    borderRadius: "100%",
-                    border: `12vw solid ${colors.blue}`,
-                    zIndex: -1,
-                }}
-            />
-
-            <Box
-                sx={{
-                    position: "absolute",
-                    height: "3.5vw",
                     bgcolor: colors.blue,
-                    right: 0,
-                    bottom: "2vw",
-                    gap: "5vw",
-                    padding: "3.5vw",
-                    paddingRight: "13vw",
                     justifyContent: "center",
                     alignItems: "center",
-                    borderTopLeftRadius: "5vw",
-                    borderBottomLeftRadius: "5vw",
+                    borderTopLeftRadius: "3vw",
+                    borderTopRightRadius: "3vw",
+                    padding: "5vw 0",
+                    flexDirection: "column",
+                    gap: "5vw",
+                    paddingBottom: 0,
                 }}
-                ref={ref}
             >
-                {socials.map((item, index) => (
-                    <motion.div
-                        key={item.icon}
-                        initial="initial"
-                        animate={inView ? "animate" : "initial"}
-                        variants={animationVariants({ reversed: true, delay: index * 0.5 })}
-                    >
-                        <Social item={item} />
-                    </motion.div>
-                ))}
+                <img src={"/logo.svg"} style={{ width: "30vw", height: "auto" }} />
+
+                <Box sx={{ gap: "2vw", color: colors.grey, width: 1 }}>
+                    <Box sx={{ flex: 0.5 }}>mapa</Box>
+                    <Box sx={{ flex: 0.5, flexDirection: "column", gap: "2vw" }}>
+                        <Typography
+                            sx={{
+                                color: colors.grey,
+                                bgcolor: colors.dark_pink,
+                                fontSize: "2rem",
+                                flex: 1,
+                                padding: "1vw 4vw",
+                                borderTopLeftRadius: "5vw",
+                                borderBottomLeftRadius: "5vw",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            comercial@eclgestao.com.br
+                        </Typography>
+
+                        <Box sx={{ flexDirection: "column", gap: "0.5vw", paddingLeft: "3vw" }}>
+                            <Typography variant="body2">Av presidente Juscelino Kubitschek, 1327</Typography>
+                            <Typography variant="body2">Sala cv 1469 andar 4 conj 41</Typography>
+                            <Typography variant="body2">Vila Nova Conceição, São Paulo</Typography>
+                            <Typography variant="body2">CEP 04.543-011</Typography>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Socials />
             </Box>
         </Box>
     )
