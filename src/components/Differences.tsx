@@ -19,7 +19,6 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                 flexDirection: "column",
                 gap: "5vw",
                 position: "relative",
-                overflowX: "hidden",
             }}
         >
             <Box sx={{ gap: isMobile ? "10vw" : "3vw", alignItems: "flex-end", flexDirection: isMobile ? "column" : "row" }}>
