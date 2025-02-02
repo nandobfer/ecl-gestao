@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, IconButton, Typography } from "@mui/material"
+import { Box, IconButton, Typography, useMediaQuery } from "@mui/material"
 import { colors } from "../style/colors"
 import { motion } from "framer-motion"
 import { links } from "../data/links"
@@ -14,13 +14,18 @@ interface SocialItem {
     label: string
     link: string
 }
-const Social: React.FC<{ item: SocialItem }> = ({ item }) => (
-    <IconButton onClick={() => window.open(item.link, "_new")}>
-        <img src={`/icons/${item.icon}.svg`} style={{ width: "2.5vw", height: "auto" }} />
-    </IconButton>
-)
+const Social: React.FC<{ item: SocialItem }> = ({ item }) => {
+    const isMobile = useMediaQuery("(orientation: portrait)")
+
+    return (
+        <IconButton onClick={() => window.open(item.link, "_new")}>
+            <img src={`/icons/${item.icon}.svg`} style={{ width: isMobile ? "7vw" : "2.5vw", height: "auto" }} />
+        </IconButton>
+    )
+}
 
 export const Socials: React.FC<SocialsProps> = ({}) => {
+    const isMobile = useMediaQuery("(orientation: portrait)")
     const { ref, inView } = useInView()
 
     const socials: SocialItem[] = [
@@ -33,15 +38,15 @@ export const Socials: React.FC<SocialsProps> = ({}) => {
         <Box
             ref={ref}
             sx={{
-                width: "70vw",
+                width: isMobile ? "80vw" : "70vw",
                 bgcolor: colors.dark_pink,
-                padding: "2.5vw",
-                borderTopLeftRadius: "3.5vw",
-                borderTopRightRadius: "3.5vw",
+                padding: isMobile ? "5vw" : "2.5vw",
+                borderTopLeftRadius: isMobile ? "10vw" : "3.5vw",
+                borderTopRightRadius: isMobile ? "10vw" : "3.5vw",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "1vw",
-                paddingBottom: "1vw",
+                gap: isMobile ? "2vw" : "1vw",
+                paddingBottom: isMobile ? "2vw" : "1vw",
                 flexDirection: "column",
             }}
         >

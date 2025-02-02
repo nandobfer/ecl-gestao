@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, useMediaQuery } from "@mui/material"
 import { colors } from "../style/colors"
 import { useInView } from "../hooks/useInView"
 import { motion } from "framer-motion"
@@ -17,6 +17,7 @@ const JourneyFeature: React.FC<{ children: React.ReactNode }> = ({ children }) =
 )
 
 export const AboutMe: React.FC<AboutMeProps> = ({}) => {
+    const isMobile = useMediaQuery("(orientation: portrait)")
     const { ref, inView } = useInView()
 
     const journey_features: string[] = [
@@ -33,26 +34,46 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
             sx={{
                 bgcolor: colors.blue,
                 width: "100vw",
-                borderRadius: "5vw",
+                borderRadius: isMobile ? "10vw" : "5vw",
                 padding: "6.2vw",
                 paddingTop: "8.2vw",
                 flexDirection: "column",
             }}
         >
-            <Box sx={{ position: "relative" }}>
+            <Box sx={{ position: "relative", flexDirection: isMobile ? "column" : "row" }}>
                 <Box sx={{ flex: 0.4, flexDirection: "column" }}>
                     <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants()}>
-                        <Typography variant="h2" sx={{ color: colors.grey }}>
-                            Karen Miniacci
-                        </Typography>
-                        <Typography sx={{ fontWeight: "bold", fontSize: "1.79448vw", lineHeight: "2.0866vw", color: colors.light_pink }}>
-                            Fundadora e Consultora Líder
-                        </Typography>
+                        <Box sx={{ flexDirection: "column", alignItems: isMobile ? "center" : undefined, gap: isMobile ? "3vw" : undefined }}>
+                            <Typography variant="h2" sx={{ color: colors.grey, width: "min-content" }}>
+                                Karen Miniacci
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontWeight: "bold",
+                                    fontSize: isMobile ? "4vw" : "1.79448vw",
+                                    lineHeight: "2.0866vw",
+                                    color: colors.light_pink,
+                                }}
+                            >
+                                Fundadora e Consultora Líder
+                            </Typography>
+                        </Box>
                     </motion.div>
 
-                    <Box sx={{ position: "absolute", bottom: "-3vw", left: 0, zIndex: 3 }}>
+                    <Box
+                        sx={{
+                            position: isMobile ? undefined : "absolute",
+                            bottom: "-3vw",
+                            left: 0,
+                            zIndex: 3,
+                            marginBottom: isMobile ? "-25vw" : undefined,
+                        }}
+                    >
                         <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ delay: 0.4 })}>
-                            <img src="/karen2.png" style={{ width: "33vw", height: "auto" }} />
+                            <img
+                                src={isMobile ? "/karen2_mobile.png" : `/karen2.png`}
+                                style={{ width: isMobile ? "88vw" : "33vw", height: "auto" }}
+                            />
                         </motion.div>
                     </Box>
                 </Box>
@@ -63,7 +84,18 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                     animate={inView ? "animate" : "initial"}
                     variants={animationVariants({ reversed: true, delay: 0.2 })}
                 >
-                    <Box sx={{ flex: 0.6, bgcolor: colors.dark_pink, borderRadius: "5vw", padding: "6.2vw", flexDirection: "column", gap: "3vw" }}>
+                    <Box
+                        sx={{
+                            flex: 0.6,
+                            bgcolor: colors.dark_pink,
+                            borderRadius: isMobile ? "10vw" : "5vw",
+                            padding: isMobile ? "10vw" : "6.2vw",
+                            flexDirection: "column",
+                            gap: isMobile ? "5vw" : "3vw",
+                            paddingTop: isMobile ? "30vw" : undefined,
+                            alignItems: isMobile ? "center" : undefined,
+                        }}
+                    >
                         <Typography variant="h3" sx={{}}>
                             Sobre:
                         </Typography>
@@ -84,12 +116,29 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                 </motion.div>
             </Box>
 
-            <Box sx={{ paddingTop: "6vw", gap: "3vw", alignItems: "center", flexDirection: "column" }}>
-                <Typography variant="h5" sx={{ fontSize: "3.75588vw" }}>
+            <Box
+                sx={{
+                    padding: isMobile ? "0 10vw 5vw 10vw" : undefined,
+                    paddingTop: "6vw",
+                    gap: "3vw",
+                    alignItems: "center",
+                    flexDirection: "column",
+                }}
+            >
+                <Typography variant="h5" sx={{ fontSize: isMobile ? "6vw" : "3.75588vw", lineHeight: isMobile ? "7vw" : undefined }}>
                     “A chave para o sucesso é conseguir equilibrar na prática pessoas, processos e tecnologia em um ecossistema funcional e eficiente”
                 </Typography>
-                <Typography sx={{ fontSize: "1.91446vw", color: colors.light_pink, fontWeight: 700 }}>⎯ Karen Miniacci</Typography>
-                <Typography variant="body2" sx={{ color: colors.grey, textAlign: "center" }}>
+                <Typography
+                    sx={{
+                        fontSize: isMobile ? "4vw" : "1.91446vw",
+                        color: colors.light_pink,
+                        fontWeight: 700,
+                        alignSelf: isMobile ? "flex-end" : undefined,
+                    }}
+                >
+                    ⎯ Karen Miniacci
+                </Typography>
+                <Typography variant="body2" sx={{ color: colors.grey, textAlign: isMobile ? undefined : "center" }}>
                     e mais do que acreditar, ela vivencia todos os dias esse método e cada projeto é uma oportunidade de transformar negócios e
                     construir legados.
                 </Typography>

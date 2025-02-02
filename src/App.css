@@ -128,3 +128,9 @@ img {
 .link:hover {
     text-decoration: underline;
 }
+
+@media (orientation: portrait) {
+    body {
+      overflow-x: hidden!important;
+    }
+  }
