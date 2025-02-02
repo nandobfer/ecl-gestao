@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { links } from "../data/links"
 import { animationVariants } from "../animationVariants"
 import { useInView } from "../hooks/useInView"
+import { Footer } from "./Footer"
 
 interface SocialsProps {}
 
@@ -39,19 +40,24 @@ export const Socials: React.FC<SocialsProps> = ({}) => {
                 borderTopRightRadius: "3.5vw",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "10vw",
+                gap: "1vw",
+                paddingBottom: "1vw",
+                flexDirection: "column",
             }}
         >
-            {socials.map((item, index) => (
-                <motion.div
-                    key={item.icon}
-                    initial="initial"
-                    animate={inView ? "animate" : "initial"}
-                    variants={animationVariants({ reversed: true, delay: index * 0.5 })}
-                >
-                    <Social item={item} />
-                </motion.div>
-            ))}
+            <Box sx={{ gap: "10vw" }}>
+                {socials.map((item, index) => (
+                    <motion.div
+                        key={item.icon}
+                        initial="initial"
+                        animate={inView ? "animate" : "initial"}
+                        variants={animationVariants({ reversed: true, delay: index * 0.5 })}
+                    >
+                        <Social item={item} />
+                    </motion.div>
+                ))}
+            </Box>
+            <Footer />
         </Box>
     )
 }
