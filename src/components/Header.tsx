@@ -6,7 +6,6 @@ import { AnchorButton } from "../types/AnchorButton"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
 import MenuIcon from "@mui/icons-material/Menu"
-import { button } from "framer-motion/client"
 
 interface HeaderProps {}
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, IconButton, Typography, useMediaQuery } from "@mui/material"
+import { Box, IconButton, useMediaQuery } from "@mui/material"
 import { colors } from "../style/colors"
 import { motion } from "framer-motion"
 import { links } from "../data/links"
