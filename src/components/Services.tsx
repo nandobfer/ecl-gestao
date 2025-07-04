@@ -35,10 +35,10 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                 sx={{
                     bgcolor: colors.blue,
                     borderRadius: isMobile ? "7vw" : "3vw",
-                    flex: 1,
                     justifyContent: "center",
                     alignItems: "center",
                     padding: "4vw 3vw",
+                    height: isMobile ? "35vw" : "15vw",
                 }}
             >
                 <Typography
@@ -46,8 +46,8 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                         color: colors.grey,
                         fontWeight: 700,
                         fontFamily: "Playfair Display",
-                        fontSize: isMobile ? "7vw" : "2.8vw",
-                        lineHeight: isMobile ? "7vw" : "2.81691vw",
+                        fontSize: isMobile ? "7vw" : "2vw",
+                        lineHeight: isMobile ? "7vw" : "2vw",
                     }}
                 >
                     <span style={{ color: colors.light_pink }}>{props.title.split(" ")[0]}</span> <br /> {props.title.split(" ").slice(1).join(" ")}
@@ -63,13 +63,14 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                     borderRadius: isMobile ? "7vw" : "3vw",
                     zIndex: -1,
                     paddingTop: isMobile ? "7vw" : "4.5vw",
+                    height: isMobile ? "80vw" : "27vw",
                 }}
             >
                 <Typography
                     sx={{
                         fontWeight: 500,
-                        fontSize: isMobile ? "5vw" : "1.56495vw",
-                        lineHeight: isMobile ? "5vw" : "2.0866vw",
+                        fontSize: isMobile ? "5vw" : "1.5vw",
+                        lineHeight: isMobile ? "5vw" : "2vw",
                     }}
                 >
                     {props.description}
@@ -130,7 +131,7 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                             lineHeight: isMobile ? "5vw" : "2.60825vw",
                         }}
                     >
-                        <span style={{ fontWeight: "bold" }}>Sistema Ecl Gestão de eficiência escalável:</span>
+                        <span style={{ fontWeight: "bold" }}>Sistema Ecl Gestão de eficiência escalável</span>
                         <br /> Implantamos um sistema completo que reorganiza a estrutura da sua empresa — da raiz à automação — para que você cresça
                         com controle, sem ser o gargalo.
                     </Typography>
@@ -294,9 +295,10 @@ Implementamos as rotinas, treinamos seu time, documentamos tudo e automatizamos 
                                             color: colors.grey,
                                         }}
                                     >
-                                        <span style={{ fontWeight: "bold" }}>Não criamos soluções genéricas. Criamos sistemas que escalam.</span> Não
-                                        existe cópia e cola na Ecl Gestão. Cada projeto nasce de um diagnóstico real, com implantação sob medida,
-                                        focada no que você precisa HOJE — e já deixa o caminho pronto pro crescimento de amanhã.
+                                        <span style={{ fontWeight: "bold" }}>Não criamos soluções genéricas. Criamos sistemas que escalam.</span>
+                                        <br />
+                                        <br /> Não existe cópia e cola na Ecl Gestão. Cada projeto nasce de um diagnóstico real, com implantação sob
+                                        medida, focada no que você precisa HOJE — e já deixa o caminho pronto pro crescimento de amanhã.
                                     </Typography>
                                 </motion.div>
                             </>
@@ -343,6 +345,7 @@ Implementamos as rotinas, treinamos seu time, documentamos tudo e automatizamos 
                         >
                             <Typography variant="body2" sx={{ marginLeft: "8vw", width: "40vw" }}>
                                 <span style={{ fontWeight: "bold" }}>Não criamos soluções genéricas. Criamos sistemas que escalam.</span> <br />
+                                <br />
                                 Não existe cópia e cola na Ecl Gestão. Cada projeto nasce de um diagnóstico real, com implantação sob medida, focada
                                 no que você precisa HOJE — e já deixa o caminho pronto pro crescimento de amanhã.
                             </Typography>
@@ -384,6 +387,7 @@ Implementamos as rotinas, treinamos seu time, documentamos tudo e automatizamos 
                     }}
                 >
                     <span style={{ fontWeight: "bold" }}>Seu crescimento é o nosso termômetro. E a nossa obsessão.</span>
+                    <br />
                     <br />
                     Se sua operação não estiver rodando como uma máquina eficiente, então o trabalho não está feito. Aqui a entrega não termina quando
                     acaba o contrato. Termina quando o sistema funciona.{" "}

@@ -41,7 +41,9 @@ export const Contact: React.FC<ContactProps> = ({}) => {
 
                 <Box sx={{ flexDirection: "column" }}>
                     <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-                        Receba gratuitamente nosso Diagnóstico Estratégico Rápido:
+                        Receba gratuitamente nosso Diagnóstico Estratégico Rápido
+                        <br />
+                        <br />
                     </Typography>
                     <Typography variant="subtitle1">Um sprint de diagnóstico que identifica:</Typography>
                     {[
@@ -57,6 +59,7 @@ export const Contact: React.FC<ContactProps> = ({}) => {
                         </Box>
                     ))}
                     <Typography variant="subtitle1">
+                        <br />
                         Em até 48h, enviamos uma análise com orientações reais. Sem enrolação. Sem compromisso.
                     </Typography>
                 </Box>

@@ -111,6 +111,8 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                         }}
                     >
                         Nosso sistema de eficiência escalável
+                        <br />
+                        <br />
                     </Typography>
                 </motion.div>
 
@@ -154,15 +156,16 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             paddingLeft: "8vw",
                             borderTopRightRadius: isMobile ? "10vw" : "2vw",
                             borderBottomRightRadius: isMobile ? "10vw" : "2vw",
+                            width: isMobile ? undefined : "35vw",
                         }}
                     >
                         <motion.div style={{}} initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({})}>
                             <Typography
                                 variant="h2"
                                 sx={{
-                                    fontSize: isMobile ? undefined : "5.2165vw",
+                                    fontSize: isMobile ? undefined : "4.5vw",
                                     color: colors.grey,
-                                    lineHeight: isMobile ? undefined : "5.2165vw",
+                                    lineHeight: isMobile ? undefined : "4.5vw",
                                 }}
                             >
                                 Como <span style={{ color: colors.light_pink }}>funciona</span> o sistema?
