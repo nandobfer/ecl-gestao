@@ -34,10 +34,11 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                         lineHeight: isMobile ? "4.4vw" : "2.29526vw",
                     }}
                 >
-                    <span style={{ fontWeight: "bold" }}>Na Ecl Gestão, não entregamos apenas planos, entregamos resultados.</span> Vamos além da
-                    teoria, acompanhando cada etapa até que tudo esteja funcionando perfeitamente. Implementamos, testamos e ajustamos lado a lado com
-                    você, garantindo não só processos eficientes, mas também{" "}
-                    <span style={{ fontWeight: "bold" }}>tranquilidade, crescimento sustentável e resultados reais.</span>
+                    <span style={{ fontWeight: "bold" }}>
+                        A maioria entrega template de notion e excel. A ECL entrega eficiência operacional implantada.
+                    </span>{" "}
+                    Cada projeto nosso é construído lado a lado com o time do cliente. Você não recebe um relatório ou um plano de ação — você recebe
+                    um sistema funcionando. Rodando. <span style={{ fontWeight: "bold", color: colors.light_pink }}>Gerando resultado</span>.
                 </Typography>
             </Box>
 
@@ -58,13 +59,14 @@ export const Differences: React.FC<DifferencesProps> = ({}) => {
                 <Typography
                     sx={{
                         flex: isMobile ? undefined : 0.6,
-                        fontSize: isMobile ? undefined : "3.23423vw",
-                        lineHeight: isMobile ? undefined : "3.1299vw",
                         color: colors.grey,
                     }}
-                    variant={isMobile ? "h5" : "h3"}
+                    variant={"subtitle1"}
                 >
-                    Porque para nós, <span style={{ color: colors.light_pink }}>crescer sem caos</span> não é apenas possível, é essencial.
+                    <span style={{ fontWeight: "bold" }}>
+                        Crescer sem caos não é ilusão. É o que acontece quando o seu negócio para de operar no improviso.
+                    </span>{" "}
+                    Se você quer parar de apagar incêndio e começar a crescer com estrutura, a hora de agir é agora.
                 </Typography>
             </Box>
 

@@ -42,47 +42,36 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
     const how_works: ItemData[] = [
         {
             icon: "map",
-            title: "Entendemos o presente (AS IS): ",
-            description: "Mapeamento de cada detalhe da sua operação atual, identificação de gargalos, ineficiências e oportunidades de melhoria.",
+            title: "Diagnóstico de precisão operacional:",
+            description:
+                "Mapeamos sua operação atual (AS IS), identificamos gargalos invisíveis, fluxos quebrados, retrabalhos e perdas ocultas de eficiência.",
         },
         {
             icon: "edit",
-            title: "Desenhamos o futuro (TO BE): ",
-            description: "Criação de processos claros, eficientes e alinhados aos objetivos estratégicos da sua empresa.",
+            title: "Redesenho inteligente e estratégico (TO BE): ",
+            description:
+                "Criamos novos fluxos operacionais enxutos e escaláveis, conectando pessoas, sistemas e IA de forma lógica, integrada e prática.",
         },
         {
             icon: "stats",
-            title: "Mão na massa: ",
-            description: "Implementação das melhorias com plano de ação personalizado, testes, treinamentos e ajustes em tempo real.",
+            title: "Implementação + Automação + Treinamento em Campo: ",
+            description:
+                "Implantamos a nova rotina com o time, documentamos cada passo, criamos as automações com IA (quando faz sentido), treinamos todo o time e acompanhamos, garantindo que os novos processos rodem com autonomia.",
         },
         {
             icon: "recycle",
-            title: "Homologação e acompanhamento de resultados: ",
+            title: "Homologação e Garantia de Resultados: ",
             description:
-                "Validação do mapeamento na prática e dos resultados. Garantia da implantação com documentação detalhada e suporte completo aos steakholders.",
+                "Validamos os fluxos com os stakeholders, ajustamos com base no uso real e acompanhamos o funcionamento até que o sistema rode sozinho — como deve ser.",
         },
     ]
-    const results: ItemData[] = [
-        {
-            icon: "eye",
-            title: "Cadeia de Valor Estratégica: ",
-            description: "Uma visão clara de como sua empresa pode agregar mais valor em cada etapa.",
-        },
-        {
-            icon: "list",
-            title: "Processos Padronizados e Otimizados: ",
-            description: "Tudo mapeado no padrão BPMN e detalhado até o nível de tarefas, eliminando gargalos e inconsistências.",
-        },
-        {
-            icon: "clip",
-            title: "Playbooks e Políticas Internas: ",
-            description: "Documentação completa para sustentar o crescimento com qualidade e eficiência.",
-        },
-        {
-            icon: "user",
-            title: "Equipe Treinada: ",
-            description: "Stakeholders preparados para operar com excelência no novo modelo.",
-        },
+    const results = [
+        "Mapeamento operacional completo e estratégico.",
+        "Fluxos otimizados e redesenhados com foco em escala.",
+        "Playbooks, políticas e treinamentos para toda a operação.",
+        "Processos automatizados (no seu sistema atual ou em alguma plataforma sugerida no projeto).",
+        "Automações inteligentes com IA, quando aplicável",
+        "Acompanhamento ativo até o sistema estar rodando com autonomia",
     ]
 
     return (
@@ -121,7 +110,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             marginLeft: isMobile ? "auto" : undefined,
                         }}
                     >
-                        Nosso Método & Entregáveis
+                        Nosso sistema de eficiência escalável
                     </Typography>
                 </motion.div>
 
@@ -130,17 +119,6 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                     initial="initial"
                     animate={inView ? "animate" : "initial"}
                     variants={animationVariants({ opacityOnly: true, delay: 0.5 })}
-                >
-                    <Typography variant={isMobile ? "h5" : "h6"} sx={{ color: colors.blue }}>
-                        Uma metodologia <span style={{ color: colors.dark_pink }}>exclusiva</span> para resultados sustentáveis
-                    </Typography>
-                </motion.div>
-
-                <motion.div
-                    style={{}}
-                    initial="initial"
-                    animate={inView ? "animate" : "initial"}
-                    variants={animationVariants({ opacityOnly: true, delay: 1 })}
                 >
                     <Typography
                         variant="body2"
@@ -151,11 +129,8 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                             padding: isMobile ? "0 6.5vw" : undefined,
                         }}
                     >
-                        Nosso método é baseado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
-                        <span style={{ fontWeight: "bold" }}>vantagens competitivas</span>. Com uma abordagem prática e descomplicada, trabalhamos
-                        desde o <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a{" "}
-                        <span style={{ fontWeight: "bold" }}>implementação</span> e acompanhamento do novo modelo, garantindo resultados reais e
-                        duradouros.
+                        Implantamos um sistema que reorganiza a operação da sua empresa — do caos à automação — com processos claros, tecnologia
+                        funcional e rotinas que rodam sozinhas.
                     </Typography>
                 </motion.div>
             </Box>
@@ -190,7 +165,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                                     lineHeight: isMobile ? undefined : "5.2165vw",
                                 }}
                             >
-                                Como <span style={{ color: colors.light_pink }}>funciona</span> o nosso processo?
+                                Como <span style={{ color: colors.light_pink }}>funciona</span> o sistema?
                             </Typography>
                         </motion.div>
                     </Box>
@@ -275,7 +250,7 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                         variant={isMobile ? "h5" : "h2"}
                         sx={{ fontSize: isMobile ? undefined : "8.86805vw", color: colors.blue, padding: isMobile ? "0 7vw" : undefined }}
                     >
-                        O que <span style={{ color: colors.dark_pink }}>entregamos</span>?
+                        O que você <span style={{ color: colors.dark_pink }}>recebe</span>?
                     </Typography>
                 </motion.div>
 
@@ -314,19 +289,24 @@ export const Methodology: React.FC<MethodologyProps> = ({}) => {
                     <Box
                         sx={{
                             flexDirection: "column",
-                            gap: isMobile ? "8vw" : "3vw",
+                            gap: isMobile ? "3vw" : "3vw",
                             flex: 1,
                             padding: isMobile ? "0 7vw" : undefined,
                         }}
                     >
                         {results.map((item, index) => (
                             <motion.div
-                                key={item.icon}
+                                key={index}
                                 initial="initial"
                                 animate={inView3 ? "animate" : "initial"}
                                 variants={animationVariants({ delay: 0.5 + index * 0.5, reversed: true })}
                             >
-                                <Item item={item} alt />
+                                <Box sx={{ gap: "1vw" }}>
+                                    <Typography variant="subtitle1" sx={{ color: colors.dark_pink, fontSize: "1.56495vw" }}>
+                                        ✷
+                                    </Typography>
+                                    <Typography variant="subtitle1">{item}</Typography>
+                                </Box>
                             </motion.div>
                         ))}
                     </Box>

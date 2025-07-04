@@ -5,6 +5,7 @@ import { Cta } from "./Cta"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
 import { useInView } from "../hooks/useInView"
+import { InlineTypography } from "./InlineTypography"
 
 interface FirstViewProps {}
 
@@ -51,8 +52,10 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
             />
             <Box id="first-view" sx={{ flexDirection: "column", flex: 1, gap: isMobile ? "4vw" : "2vw" }}>
                 <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants()}>
-                    <Typography sx={{ fontSize: isMobile ? "4vw" : "1.91446vw", color: colors.light_pink, fontWeight: 700 }}>
-                        Modelagem de Negócios
+                    <Typography sx={{ fontSize: isMobile ? "3.7vw" : "1.5vw", color: colors.light_pink, fontWeight: 700 }}>
+                        Escalabilidade real começa com processos inteligentes. <br />
+                        {isMobile ? <br /> : ""}
+                        Implantamos sistemas operacionais com IA que rodam sem você.
                     </Typography>
                 </motion.div>
                 <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ delay: 0.2 })}>
@@ -60,24 +63,27 @@ export const FirstView: React.FC<FirstViewProps> = ({}) => {
                         sx={{
                             color: colors.grey,
                             fontWeight: 700,
-                            fontSize: isMobile ? "12.6vw" : "4.69485vw",
-                            lineHeight: isMobile ? "12.6vw" : "4.69485vw",
+                            fontSize: isMobile ? "5.2vw" : "2.5vw",
+                            lineHeight: isMobile ? "5.2vw" : "2.5vw",
                             fontFamily: "Playfair Display",
                             width: isMobile ? undefined : 0.65,
                         }}
                     >
-                        Resultados por meio de otimização de processos:{!isMobile && " Pessoas, processos e tecnologia em sintonia."}
+                        Enquanto você tenta vender mais, seu time se afoga em retrabalho, erros e processos improvisados. Nós entramos, mapeamos,
+                        implantamos e automatizamos{" "}
+                        <InlineTypography highlight secondary>
+                            TUDO
+                        </InlineTypography>{" "}
+                        e treinamos o seu time. <br />
+                        <br />
+                        Pra sua empresa escalar com eficiência, <br />
+                        sem você precisar operar no grito.
                     </Typography>
-                    {isMobile && (
-                        <Typography sx={{ color: colors.grey, fontSize: "6vw", fontFamily: "Playfair Display", marginTop: "5vw" }}>
-                            Pessoas, processos e tecnologia em sintonia.
-                        </Typography>
-                    )}
                 </motion.div>
 
                 <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ delay: 0.4 })}>
-                    <Cta color="primary" href="#about-us" style={{ padding: "1vw 10vw" }}>
-                        saiba mais
+                    <Cta color="primary" href="#about-us" style={{ padding: "1vw 5vw", fontSize: isMobile ? "3.7vw" : undefined }}>
+                        Quero diagnosticar minha ineficiência
                     </Cta>
                 </motion.div>
             </Box>

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react"
 import { Box, Typography, useMediaQuery } from "@mui/material"
 import { colors } from "../style/colors"
 import { useInView } from "../hooks/useInView"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
+import { InlineTypography } from "./InlineTypography"
 
 interface AboutUsProps {}
 
@@ -26,11 +27,12 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
         >
             <motion.div initial="initial" animate={inView ? "animate" : "initial"} variants={animationVariants({ opacityOnly: true })}>
                 <Typography variant="subtitle1">
-                    Na <span style={{ fontWeight: "bold" }}>Ecl Gestão</span>, desde 2015, somos mais do que uma consultoria em modelagem de negócios:{" "}
-                    <span style={{ fontWeight: "bold" }}>somos parceiros estratégicos</span>
-                    de empresários que buscam <span style={{ fontWeight: "bold" }}>organizar, crescer e prosperar</span> de maneira sustentável. Nosso
-                    trabalho combina <span style={{ fontWeight: "bold" }}>pessoas, processos e tecnologia</span> de forma prática e descomplicada,
-                    porque acreditamos que <span style={{ fontWeight: "bold" }}>soluções eficientes devem ser acessíveis.</span>
+                    <span style={{ fontWeight: "bold" }}>
+                        Há mais de 10 anos, somos especialistas em destravar operações caóticas e transformar crescimento desordenado em escala
+                        previsível.
+                    </span>{" "}
+                    Não entregamos templates prontos e planilhas. Implantamos sistemas de eficiência real — combinando estratégia de processos,
+                    automações inteligentes e uso estratégico de IA.
                 </Typography>
             </motion.div>
 
@@ -53,27 +55,47 @@ export const AboutUs: React.FC<AboutUsProps> = ({}) => {
                     style={{ flex: 0.7 }}
                 >
                     <Typography variant="subtitle1">
-                        Mais do que teoria, enfrentamos os desafios de empreender e estruturar negócios. Isso nos dá uma visão única para oferecer
-                        <span style={{ fontWeight: "bold" }}>soluções personalizadas</span> que funcionam de verdade.
+                        <span style={{ fontWeight: "bold" }}>
+                            A Ecl Gestão nasceu no campo de batalha, dentro de empresas que travavam por causa de decisões operacionais ruins.
+                        </span>{" "}
+                        Sabemos o que paralisa uma operação. E sabemos exatamente como consertar — com precisão, método e execução.
                     </Typography>
                 </motion.div>
             </Box>
 
-            <Typography variant={isMobile ? "h5" : "h2"} sx={{ color: colors.blue }}>
-                Sabemos exatamente como é estar do <span style={{ color: colors.dark_pink }}>outro lado da mesa</span>.
+            <Typography variant={"h5"} sx={{ color: colors.blue }}>
+                Se você sente que sua empresa depende demais de você, é porque <InlineTypography highlight>ainda não operamos nela</InlineTypography>.
+            </Typography>
+
+            <Box sx={{ flexDirection: "column", gap: "1vw" }}>
+                <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                    Você sabe que a operação está falhando quando:
+                </Typography>
+                <Box sx={{ flexDirection: "column" }}>
+                    {[
+                        "Cada vendedor faz do seu jeito.",
+                        "O cliente entra confuso e volta pro time comercial no pós-venda.",
+                        "O financeiro só sabe o que fatura — não o que trava.",
+                        "E você precisa explicar o básico toda semana.",
+                    ].map((item, index) => (
+                        <Box key={index} sx={{ gap: "1vw" }}>
+                            <Typography variant="subtitle1" sx={{ color: colors.dark_pink, fontSize: "1.56495vw" }}>
+                                ✷
+                            </Typography>
+                            <Typography variant="subtitle1">{item}</Typography>
+                        </Box>
+                    ))}
+                </Box>
+            </Box>
+            <Typography variant="subtitle1">
+                <span style={{ fontWeight: "bold" }}>A Ecl Gestão existe pra acabar com isso.</span> Implantamos estruturas que organizam o caos,
+                automatizam o essencial e liberam você pra pensar no crescimento — com clareza, não com correria.
             </Typography>
 
             <Typography variant="subtitle1">
-                Sabe aquele departamento comercial onde cada vendedor “faz do seu jeito”, os contratos ficam travados por dias sem inicio e os
-                clientes voltam ao comercial pós-onboarding para “ajustar o produto/serviço contratado”?{" "}
-                <span style={{ fontWeight: "bold" }}>Pois é, nós já vimos – e vivemos – isso.</span> Já enfrentamos esses desafios tanto nas nossas
-                próprias empresas quanto nos negócios dos nossos clientes.
-            </Typography>
-
-            <Typography variant="subtitle1">
-                E é exatamente aqui que a<span style={{ fontWeight: "bold" }}> Ecl Gestão entra em ação:</span> organizamos o caos, estruturamos
-                processos claros e criamos fluxos eficientes que transformam desafios em{" "}
-                <span style={{ fontWeight: "bold" }}>resultados reais e sustentáveis.</span>
+                <span style={{ fontWeight: "bold" }}>Desde 2015, ajudamos negócios a crescer sem perder o controle.</span> Somos uma consultoria de
+                operação com foco em eficiência e execução real: Mapeamos processos, implantamos sistemas e integramos automações com IA — sem
+                blá-blá-blá técnico, sem engessar o time, sem soluções genéricas.
             </Typography>
         </Box>
     )

@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react"
 import { Box, Typography, useMediaQuery } from "@mui/material"
 import { colors } from "../style/colors"
 import { Cta } from "./Cta"
 import { useInView } from "../hooks/useInView"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
+import { InlineTypography } from "./InlineTypography"
 
 interface ServicesProps {}
 
@@ -21,7 +22,13 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
         >
             <Typography
                 variant="h1"
-                sx={{ position: "absolute", top: isMobile ? 0 : "-3.5vw", left: isMobile ? "3vw" : 0, fontSize: isMobile ? "10vw" : undefined }}
+                sx={{
+                    position: "absolute",
+                    top: isMobile ? "-3vw" : "-3.5vw",
+                    left: isMobile ? undefined : 0,
+                    fontSize: isMobile ? "10vw" : undefined,
+                    right: isMobile ? "3vw" : undefined,
+                }}
             >
                 {props.number}
             </Typography>
@@ -40,7 +47,7 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                         color: colors.grey,
                         fontWeight: 700,
                         fontFamily: "Playfair Display",
-                        fontSize: isMobile ? "7vw" : "3.1299vw",
+                        fontSize: isMobile ? "7vw" : "2.8vw",
                         lineHeight: isMobile ? "7vw" : "2.81691vw",
                     }}
                 >
@@ -57,7 +64,6 @@ const ServiceItem: React.FC<{ title: string; description: string; number: number
                     borderRadius: isMobile ? "7vw" : "3vw",
                     zIndex: -1,
                     paddingTop: isMobile ? "7vw" : "4.5vw",
-                    height: isMobile ? "50vw" : "19vw",
                 }}
             >
                 <Typography
@@ -125,10 +131,9 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                             lineHeight: isMobile ? "5vw" : "2.60825vw",
                         }}
                     >
-                        Método focado em <span style={{ fontWeight: "bold" }}>transformar desafios</span> operacionais em{" "}
-                        <span style={{ fontWeight: "bold" }}>vantagens competitivas.</span> Abordagem prática e descomplicada desde o{" "}
-                        <span style={{ fontWeight: "bold" }}>diagnóstico</span> até a <span style={{ fontWeight: "bold" }}>implementação</span>,
-                        garantindo resultados reais e duradouros.
+                        <span style={{ fontWeight: "bold" }}>Sistema Ecl Gestão de eficiência escalável:</span>
+                        <br /> Implantamos um sistema completo que reorganiza a estrutura da sua empresa — da raiz à automação — para que você cresça
+                        com controle, sem ser o gargalo.
                     </Typography>
 
                     <Box
@@ -166,22 +171,29 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                 <motion.div initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({ delay: 0 })}>
                     <ServiceItem
                         number={1}
-                        title="Cadeia de valor"
-                        description="Diagnóstico estratégico e profundo do nível estratégico até o operacional, baseado na proposta de valor da sua empresa"
+                        title="Diagnóstico operacional de alta precisão"
+                        description="Diagnóstico operacional de alta precisão
+Identificamos exatamente onde sua operação está travando crescimento, queimando dinheiro ou desperdiçando time.
+Nada genérico — é um raio-X cirúrgico da sua cadeia de valor, com plano prático de correção.
+"
                     />
                 </motion.div>
                 <motion.div initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({ delay: 0.5 })}>
                     <ServiceItem
                         number={2}
-                        title="Mapeamento de processos"
-                        description='De "como está" para "como deve ser", desenhamos e implementamos fluxos que eliminam desperdícios e aumentam a eficiência'
+                        title="Redesenho e Mapeamento Estratégico de Processos"
+                        description="Transformamos a bagunça atual em processos claros, fluídos e replicáveis — do marketing ao financeiro.
+Estruturamos com foco em eficiência, padronização e automação futura.
+Tudo conectado ao seu modelo de negócio.
+"
                     />
                 </motion.div>
                 <motion.div initial="initial" animate={inView2 ? "animate" : "initial"} variants={animationVariants({ delay: 1 })}>
                     <ServiceItem
                         number={3}
-                        title="Implantação na prática"
-                        description="Vamos além da teoria, entregando treinamentos, documentação e acompanhamento em tempo real"
+                        title="Implantação com execução real + Automações com IA"
+                        description="Nada de relatórios. Aqui a mudança acontece.
+Implementamos as rotinas, treinamos seu time, documentamos tudo e automatizamos os fluxos com IA onde faz sentido — garantindo que o sistema funcione SEM VOCÊ ter que operar no braço."
                     />
                 </motion.div>
             </Box>
@@ -215,32 +227,15 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                                 fontWeight: "bold",
                             }}
                         >
-                            Diferente de outras consultorias,
+                            Não somos uma consultoria,
                         </Typography>
 
-                        {isMobile ? (
-                            <Box sx={{ flexDirection: "column", marginTop: "-15vw" }}>
-                                <Typography variant="h5" sx={{ textAlign: "end" }}>
-                                    não
-                                </Typography>
-                                <Typography variant="h5" sx={{ textAlign: "center" }}>
-                                    entregamos
-                                </Typography>
-                                <Typography variant="h5" sx={{ textAlign: "start" }}>
-                                    soluções
-                                </Typography>
-                                <Typography variant="h5" sx={{ textAlign: "end" }}>
-                                    genéricas
-                                </Typography>
-                            </Box>
-                        ) : (
-                            <Typography
-                                variant="h1"
-                                sx={{ fontSize: "6.78145vw", lineHeight: "6.78145vw", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
-                            >
-                                não entregamos soluções genéricas
-                            </Typography>
-                        )}
+                        <Typography
+                            variant="h1"
+                            sx={{ fontSize: "5.5vw", lineHeight: "5.5vw", textAlign: "end", color: colors.grey, marginTop: "-3vw" }}
+                        >
+                            Somos uma operação paralela que entra, arruma a casa e instala eficiência.
+                        </Typography>
 
                         <Typography
                             variant="body2"
@@ -248,9 +243,25 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                                 color: colors.grey,
                             }}
                         >
-                            Nosso foco é criar <span style={{ fontWeight: 700 }}>resultados sustentáveis</span> e{" "}
-                            <span style={{ fontWeight: 700 }}>contínuos</span>, colocando ordem no caos e trazendo clareza à sua operação.
+                            Enquanto outros entregam templates, excel e apresentações, nós entregamos:
                         </Typography>
+                        <Box sx={{ flexDirection: "column" }}>
+                            {[
+                                "Processos que o time realmente usa",
+                                "Automações com IA que não travam",
+                                "Rotinas visíveis e previsíveis",
+                                "Resultados replicáveis e sustentáveis — sem depender de você",
+                            ].map((item, index) => (
+                                <Box key={index} sx={{ gap: "1vw" }}>
+                                    <Typography variant="subtitle1" sx={{ color: colors.light_pink, fontSize: "1.56495vw" }}>
+                                        ✷
+                                    </Typography>
+                                    <Typography variant="subtitle1" sx={{ color: colors.grey }}>
+                                        {item}
+                                    </Typography>
+                                </Box>
+                            ))}
+                        </Box>
 
                         {isMobile && (
                             <>
@@ -284,9 +295,9 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                                             color: colors.grey,
                                         }}
                                     >
-                                        O que nos motiva é ver cada cliente <span style={{ fontWeight: 700 }}>atingindo novos patamares</span>.
-                                        Afinal, quando você cresce de forma sustentável, <span style={{ fontWeight: 700 }}>nós crescemos juntos</span>
-                                        .
+                                        <span style={{ fontWeight: "bold" }}>Não criamos soluções genéricas. Criamos sistemas que escalam.</span> Não
+                                        existe cópia e cola na Ecl Gestão. Cada projeto nasce de um diagnóstico real, com implantação sob medida,
+                                        focada no que você precisa HOJE — e já deixa o caminho pronto pro crescimento de amanhã.
                                     </Typography>
                                 </motion.div>
                             </>
@@ -332,8 +343,9 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                             variants={animationVariants({ delay: 1, reversed: true })}
                         >
                             <Typography variant="body2" sx={{ marginLeft: "8vw", width: "40vw" }}>
-                                O que nos motiva é ver cada cliente <span style={{ fontWeight: 700 }}>atingindo novos patamares</span>. Afinal, quando
-                                você cresce de forma sustentável, <span style={{ fontWeight: 700 }}>nós crescemos juntos</span>.
+                                <span style={{ fontWeight: "bold" }}>Não criamos soluções genéricas. Criamos sistemas que escalam.</span> <br />
+                                Não existe cópia e cola na Ecl Gestão. Cada projeto nasce de um diagnóstico real, com implantação sob medida, focada
+                                no que você precisa HOJE — e já deixa o caminho pronto pro crescimento de amanhã.
                             </Typography>
                         </motion.div>
                     </Box>
@@ -364,12 +376,19 @@ export const Services: React.FC<ServicesProps> = ({}) => {
                 }}
             >
                 <Typography
-                    variant={isMobile ? "h5" : "h2"}
+                    variant={isMobile ? "h5" : "h5"}
                     sx={{
                         color: colors.blue,
+                        fontWeight: "normal",
+                        fontSize: "2.8vw",
+                        lineHeight: "3.5vw",
                     }}
                 >
-                    Ecl Gestão, <span style={{ color: colors.dark_pink }}>transformando</span> processos, impulsionando resultados.
+                    <span style={{ fontWeight: "bold" }}>Seu crescimento é o nosso termômetro. E a nossa obsessão.</span>
+                    <br />
+                    Se sua operação não estiver rodando como uma máquina eficiente, então o trabalho não está feito. Aqui a entrega não termina quando
+                    acaba o contrato. Termina quando o sistema funciona.{" "}
+                    <span style={{ fontWeight: "bold", color: colors.dark_pink }}>De verdade.</span>
                 </Typography>
                 <img src="/services-2.png" style={{ width: isMobile ? "60vw" : "35vw", height: "auto", marginTop: "-2.3vw", marginLeft: "2vw" }} />
             </Box>

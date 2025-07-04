@@ -21,10 +21,11 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
     const { ref, inView } = useInView()
 
     const journey_features: string[] = [
-        "Especialização em Oxford University (UK) em gestão do conhecimento;",
-        "Experiência em governança corporativa e qualidade;",
-        "Expertise em consultoria em gestão para empresas familiares, pequenas e médias;",
-        "Especialidade em mapeamento e implantação de processos internos em organizações de diferentes setores.",
+        "+10 anos transformando caos operacional em crescimento lucrativo;",
+        "Especialização em gestão do conhecimento (Oxford University);",
+        "Vivência em negócios reais, como executiva e fundadora;",
+        "Mapeamento e implantação de processos com foco em automação inteligente;",
+        "Governança e eficiência para empresas que precisam crescer sem arriscar tudo no meio do caminho.",
     ]
 
     return (
@@ -101,10 +102,11 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                             Sobre:
                         </Typography>
                         <Typography variant="h4">
-                            Com mais de 15 anos de experiência em gestão de processos. Mestre em Administração e com MBA em Economia e Mercado, reúne
-                            expertise técnica e vivência prática, oferecendo consultorias que realmente fazem a diferença. Além disso, é
-                            sócia-proprietária de outro negócio, colocando em prática em seu negócio em ascensão tudo aquilo que a Ecl Gestão ajuda
-                            outras empresas a construir.
+                            Mais de 15 anos de experiência em gestão de processos de negócios. Mestre em Administração e com MBA em Economia e
+                            Mercado. <br />
+                            <br />
+                            Karen combina profundidade estratégica com execução prática. Não é apenas consultora. É sócia-operadora de negócios reais
+                            — e traz pra cada cliente o que FUNCIONA no campo de batalha, não em sala de reunião.
                         </Typography>
                         <Typography variant="h3">Destaques da trajetória:</Typography>
 
@@ -126,8 +128,9 @@ export const AboutMe: React.FC<AboutMeProps> = ({}) => {
                     flexDirection: "column",
                 }}
             >
-                <Typography variant="h5" sx={{ fontSize: isMobile ? "6vw" : "3.75588vw", lineHeight: isMobile ? "7vw" : undefined }}>
-                    “A chave para o sucesso é conseguir equilibrar na prática pessoas, processos e tecnologia em um ecossistema funcional e eficiente”
+                <Typography variant="h5" sx={{ fontSize: isMobile ? "6vw" : "2.8vw", lineHeight: isMobile ? "7vw" : undefined }}>
+                    "Eu aplico nas minhas empresas o que entrego nas consultorias. O mercado não tem espaço mais para achismos e nem amadorismo. Se
+                    não funciona na prática, não entra na Ecl Gestão."
                 </Typography>
                 <Typography
                     sx={{
