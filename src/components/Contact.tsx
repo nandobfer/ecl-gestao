@@ -3,7 +3,6 @@ import { Box, Button, Typography, useMediaQuery } from "@mui/material"
 import { colors } from "../style/colors"
 import { Socials } from "./Socials"
 import { Map } from "./Map"
-import { Cta } from "./Cta"
 import { links } from "../data/links"
 
 interface ContactProps {}

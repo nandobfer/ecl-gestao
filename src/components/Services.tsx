@@ -5,7 +5,6 @@ import { Cta } from "./Cta"
 import { useInView } from "../hooks/useInView"
 import { motion } from "framer-motion"
 import { animationVariants } from "../animationVariants"
-import { InlineTypography } from "./InlineTypography"
 
 interface ServicesProps {}
 
